@@ -1,0 +1,17 @@
+    <header class="header">
+        <a class="header__link--images" href="/"><img id="header-logo" class="header__logo" src="/images/logo-expo.png" alt="logo EXPO Pardubice"></a>
+
+        <nav class="header__menu">
+
+            <input type="checkbox" class="header__checkbox" id="header-checkbox">
+
+            <label for="header-checkbox" class="header__toogler">☰ Menu</label>
+
+            <ul class="header__list">
+                <li class="header__item"><a class="header__link {% if page.url === '/program/' %} active{% endif %}" href="/program/">Program</a></li>
+                <li class="header__item"><a class="header__link {% if page.url === '/navstevnik/' %} active{% endif %}" href="/navstevnik/">Pro návštěvníky</a></li>
+                <li class="header__item"><a class="header__link {% if page.url === '/vystavovatel/' %} active{% endif %}" href="/vystavovatel/">Pro vystavovatele</a></li>
+                <li class="header__item"><a class="header__link {% if page.url === '/vstupenky/' %} active{% endif %}" href="/vstupenky/">Vstupenky</a></li>
+            </ul>
+        </nav>
+    </header>

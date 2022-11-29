@@ -1,0 +1,156 @@
+@use 'breakpoint';
+@use 'font';
+@use 'color';
+
+.header {
+    margin: 0 auto;
+    padding: 10px 0;
+    max-width: breakpoint.$width-computer;
+    background-color: #ffffff;
+    text-align: center;
+    box-shadow: 0px 15px 10px -15px rgba(#000000, 0.15);
+    z-index: 9999;
+
+    @media screen and (min-width: breakpoint.$width-tablet) {
+        max-width: breakpoint.$width-computer - 1px;
+    }
+
+    @media screen and (min-width: breakpoint.$width-computer) {
+        padding: 10px 20px;
+        max-width: 100%;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        position: fixed;
+        top: 0;
+        left: 0;
+        right: 0;
+    }
+
+    &__logo {
+        width: 100px;
+        height: auto;
+
+        @media screen and (min-width: breakpoint.$width-computer) {
+            width: 125px;
+            transition: .3s all;
+            -moz-transition: .3s all;
+            -webkit-transition: .3s all;
+            -o-transition: .3s all;
+        }
+    }
+
+    &__checkbox {
+        position: absolute;
+        left: -9999px;
+        // display: none;
+    }
+
+    @media screen and (max-width: (breakpoint.$width-tablet - 1px)) {
+        &__checkbox:checked ~ &__list {
+            display: block;
+        }
+    }
+
+    &__toogler {
+        display: block;
+        padding: 10px 0;
+        font-size: 20px;
+        cursor: pointer;
+
+        @media screen and (min-width: breakpoint.$width-tablet) {
+            display: none;
+        }
+    }
+
+    &__toogler:hover {
+        background-color: #050e19;
+        color: color.$color-secondary-text;
+    }
+
+    &__list {
+        display: none;
+        margin: 0;
+        padding: 0;
+        list-style: none;
+
+        @media screen and (min-width: breakpoint.$width-tablet) {
+            margin-top: 10px;
+            max-width: breakpoint.$width-computer - 1px;
+            display: flex;
+            justify-content: space-between;
+        }
+
+        @media screen and (min-width: breakpoint.$width-computer) {
+            margin-top: 0;
+        }
+    }
+
+    &__item {
+        font-size: 20px;
+        text-transform: uppercase;
+        border-top: 1px solid rgba(#050e19, 0.5);
+
+        @media screen  and (min-width: breakpoint.$width-tablet) {
+            border-top: 0;
+            flex: 1 0 auto;
+            font-size: 17px;
+        }
+
+        @media screen and (min-width: breakpoint.$width-computer) {
+            padding: 0 0;
+            font-size: 16px;
+        }
+
+        &:hover {
+            background-color: #050e19;
+            color: color.$color-secondary-text;
+
+            @media screen and (min-width: breakpoint.$width-computer) {
+                padding: 0 0;
+            }
+
+            & > .active {
+                color: #13529e;
+                background-color: color.$color-secondary-text;
+            }
+        }
+    }
+
+    &__link {
+        display: block;
+        padding: 10px 0;
+        color: color.$color-primary-text;
+        text-decoration: none;
+
+        @media screen and (min-width: breakpoint.$width-computer) {
+            padding: 10px 20px;
+        }
+
+        &:hover {
+            background-color: #050e19;
+            color: color.$color-secondary-text;
+
+            @media screen and (min-width: breakpoint.$width-computer) {
+                padding: 10px 20px;
+            }
+        }
+    }
+
+    & .active {
+        color: #13529e;
+
+        @media screen and (min-width: breakpoint.$width-computer) {
+            &::after {
+                content:"";
+                height: 2px;
+                border: 0;
+                background: #13529e;
+                width: 100%;
+                margin: 1px auto 0px auto;
+                display: block;
+            }
+        }
+
+    }
+}

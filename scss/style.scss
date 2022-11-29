@@ -1,0 +1,491 @@
+@use 'breakpoint';
+@use 'font';
+@use 'color';
+@use 'header';
+@use 'footer';
+
+/* intuitivnejší box-sizing */
+html { box-sizing: border-box; }
+*, ::after, ::before { box-sizing: inherit; }
+
+body {
+    margin: 0;
+	padding: 0;
+    background-color: color.$color-primary-bg;
+    line-height: 1.6;
+    font-family: font.$font-default;
+    color: color.$color-primary-text;
+    font-size: 16px;
+}
+
+sup, sub {
+    line-height: 0;
+  }
+
+section {
+    padding: 0 10px;
+}
+
+section + section {
+    margin-top: 20px;
+}
+
+.main {
+    margin: 0 auto;
+    padding: 0;
+    max-width: breakpoint.$width-computer;
+
+    @media screen and (min-width: breakpoint.$width-tablet) {
+        max-width: breakpoint.$width-computer - 1px;
+    }
+
+    @media screen and (min-width: breakpoint.$width-computer) {
+        max-width: 100%;
+        margin-top: 160px;
+    }
+}
+
+.slider {
+    padding: 0;
+    display: none;
+
+    @media screen and (min-width: breakpoint.$width-tablet) {
+        display: block;
+    }
+}
+
+.glide {
+    
+    &__link {
+        display: grid;
+        align-items: center;
+        text-decoration: none;
+    }
+
+    &__content {
+        grid-column: 1 / 2;
+        grid-row: 1 / 2;
+        order: 2;
+        color: white;
+        font-size: 3vw;
+        line-height: 1.1;
+        padding-left: 6vw;
+        width: 35%;
+    }
+
+    &__picture {
+        object-fit: fill;
+        width: 100%;
+        height: auto;
+        grid-column: 1 / 2;
+        grid-row: 1 / 2;
+        order: 1;
+    }
+
+    &__arrows {
+
+        @media screen and (min-width: breakpoint.$width-tablet) {
+            display: none;
+        }
+
+        @media screen and (min-width: breakpoint.$width-computer) {
+            display: block;
+        }
+    } 
+}
+
+.information {
+    padding: 10px;
+    background-color: color.$color-secondary-bg;
+    font-size: 18px;
+    text-align: center;
+    margin-top: -10px;
+
+    @media screen and (min-width: breakpoint.$width-computer) {
+        padding: 10px 100px;
+        display: flex;
+        justify-content: space-evenly;
+        align-items: center;
+        gap: 10px;
+        font-size: 16px;
+    }
+
+    &__item {
+        padding: 10px 10px;
+
+        @media screen and (min-width: breakpoint.$width-computer) {
+            padding: 40px 10px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            gap: 10px;
+        }
+    }
+
+    &__item + &__item {
+        border-top: 1px solid rgba(color.$color-secondary-text, 0.5);
+
+        @media screen and (min-width: breakpoint.$width-computer) {
+            border: 0;
+        }
+    }
+
+    &__icon {
+        display: none;
+        width: 50px;
+        height: auto;
+
+        @media screen and (min-width: breakpoint.$width-tablet) {
+            display: inline-block;
+        }
+    }
+
+    &__title:first-child {
+        text-transform: uppercase;
+        font-weight: bold;
+    }
+
+    &__title {
+        margin: 8px;
+        display: inline-block;
+        font-weight: bold;
+
+        @media screen and (min-width: breakpoint.$width-tablet) {
+            margin: 0;
+        }
+
+        @media screen and (min-width: breakpoint.$width-computer) {
+            display: block;
+        }
+    }
+
+    &__content {
+        margin: 8px;
+        display: inline-block;
+
+        @media screen and (min-width: breakpoint.$width-tablet) {
+            margin: 0;
+        }
+
+        @media screen and (min-width: breakpoint.$width-computer) {
+            display: block;
+        }
+    }
+
+    .rows {
+        @media screen and (min-width: breakpoint.$width-tablet) {
+            display: inline-block;
+            text-align: left;
+        }
+    }
+}
+
+.about {
+    font-size: 18px;
+
+    @media screen and (min-width: breakpoint.$width-tablet) {
+        padding: 0 20px;
+    }
+
+    &__title {
+        padding-top: 20px;
+        font-family: font.$font-special;
+        text-align: center;
+    }
+
+}
+
+.partners {
+
+    @media screen and (min-width: breakpoint.$width-tablet) {
+        padding: 0 20px;
+    }
+
+    &__title {
+        padding-top: 20px;
+        font-family: font.$font-special;
+        text-align: center;
+    }
+
+    &__gallery {
+        display: block;
+
+        @media screen and (min-width: breakpoint.$width-tablet) {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 10px;
+            justify-content: center;
+            align-items: center;
+        }
+    }
+
+    &__link {
+        margin: 10px auto;
+        padding: 20px;
+        background-color: color.$color-secondary-bg;
+        width: 250px;
+        height: 250px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+
+        @media screen and (min-width: breakpoint.$width-tablet) {
+            flex: 0 0 250px;
+        }
+    }
+
+    &__item {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        width: 100%;
+        height: auto;
+    }
+
+    &__logo {
+        max-width: 100%;
+        height: auto;
+    }
+}
+
+.maps {
+    padding: 0;
+    
+    &__title {
+        padding-top: 20px;
+        font-family: font.$font-special;
+        text-align: center;
+    }
+
+    &__item {
+        display: block;
+        width: 100%;
+        height: 400px;
+        border: 0;
+
+        @media screen and (min-width: breakpoint.$width-computer) {
+            height: 500px;
+        }
+
+    }
+}
+
+.section {
+    font-size: 18px;
+
+    @media screen and (min-width: breakpoint.$width-tablet) {
+        padding: 0 20px;
+    }
+
+    &__title {
+        padding-top: 20px;
+        font-family: font.$font-special;
+        text-align: center;
+    }
+
+    &__subtitle {
+        padding-top: 18px;
+        font-family: font.$font-special;
+        text-align: center;
+    }
+
+    &__table {
+        @media screen and (min-width: breakpoint.$width-tablet) {
+            margin: 0 auto;
+            width: 600px;
+        }
+    }
+
+    &__row {
+        
+        @media screen and (min-width: breakpoint.$width-tablet) {
+            display: flex;
+            align-items: center;
+            gap: 30px;
+        }
+    }
+
+    &__row + &__row {
+        border-top: 1px solid rgba(color.$color-primary-text, 0.3);
+    }
+
+    &__time {
+
+        color: #13529e;
+        font-size: 26px;
+    }
+}
+
+.person {
+    display: block;
+
+        @media screen and (min-width: breakpoint.$width-tablet) {
+             display: flex;
+             justify-content: center;
+             align-items: center;
+             gap: 10px;
+             flex-wrap: wrap;
+        }
+
+    &__item {
+        margin: 10px;
+        padding: 10px;
+        border: 1px solid rgba(#13529e, 0.5);
+        text-align: center;
+
+        @media screen and (min-width: breakpoint.$width-tablet) {
+             display: flex;
+             align-items: center;
+             gap: 10px;
+        }
+    }
+
+    &__foto {
+        max-width: 150px;
+        height: auto;
+        border-radius: 50%;
+    }
+
+    &__data {
+        text-align: center;
+    }
+
+    &__name {
+        margin: 0;
+        font-size: 17px;
+        color: #13529e;
+        text-transform: uppercase;
+        letter-spacing: 2px;
+    }
+
+    &__position {
+        margin: 0;
+    }
+}
+
+.package {
+    text-align: center;
+
+    @media screen and (min-width: breakpoint.$width-computer) {
+        display: flex;
+        justify-content: center;
+        align-items: stretch;
+   }
+
+    &__version {
+        border: 1px solid color.$color-secondary-bg;
+
+        @media screen and (min-width: breakpoint.$width-computer) {
+            flex: 0 0 calc(100% / 3);
+            margin-top: 20px;
+            margin-bottom: 20px;
+       }
+    }
+
+    &--popular {
+        margin-top: 20px;
+        margin-bottom: 20px;
+
+        @media screen and (min-width: breakpoint.$width-computer) {
+            margin-top: 0;
+            margin-bottom: 0;
+       }
+    }
+
+    &__title {
+        padding: 10px 0;
+        background-color: color.$color-secondary-bg;
+    }
+
+    &__title--popular {
+        padding: 10px 0;
+        background-color: #13529e;
+        color: color.$color-secondary-text;
+    }
+
+    &__price {
+        padding: 20px 0;
+        font-size: 26px;
+        font-weight: bold;
+        color: #13529e;
+    }
+
+    &__price--popular {
+        padding: 20px 0;
+        font-size: 26px;
+        font-weight: bold;
+        color: #13529e;
+
+        @media screen and (min-width: breakpoint.$width-computer) {
+            padding: 30px 0;
+       }
+    }
+
+    &__description {
+        margin: 0;
+        padding: 0;
+        list-style-type: none;
+    }
+
+    &__item {
+        padding: 5px 0;
+        border: 1px solid color.$color-secondary-bg;
+    }
+
+    &__item--popular {
+        padding: 5px 0;
+        border: 1px solid color.$color-secondary-bg;
+
+        @media screen and (min-width: breakpoint.$width-computer) {
+            border-left: 0;
+            border-right: 0;
+       }
+    }
+
+    &__item:nth-of-type(1) {
+        @media screen and (min-width: breakpoint.$width-computer) {
+            border-right: 0;
+        }
+    }
+
+    &__item:nth-of-type(-n+10) {
+        @media screen and (min-width: breakpoint.$width-computer) {
+            border-left: 0;
+        }
+    }
+}
+
+.schedule {
+
+    @media screen and (min-width: breakpoint.$width-computer) {
+        display: flex;
+        justify-content: space-evenly;
+        align-items: flex-start;
+        gap: 20px;
+    }
+
+    &__title {
+        font-weight: bold;
+        color: #13529e;
+    }
+}
+
+#myBtn {
+    display: none; /* Hidden by default */
+    position: fixed; /* Fixed/sticky position */
+    bottom: 20px; /* Place the button at the bottom of the page */
+    right: 30px; /* Place the button 30px from the right */
+    z-index: 99; /* Make sure it does not overlap */
+    border: none; /* Remove borders */
+    outline: none; /* Remove outline */
+    background-color: #13529e; /* Set a background color */
+    color: white; /* Text color */
+    cursor: pointer; /* Add a mouse pointer on hover */
+    padding: 15px; /* Some padding */
+    border-radius: 10px; /* Rounded corners */
+    font-size: 18px; /* Increase font size */
+  }
+  
+  #myBtn:hover {
+    background-color: #555; /* Add a dark-grey background on hover */
+  }
