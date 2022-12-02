@@ -2,9 +2,31 @@
 layout: layouts/template.njk
 ---
 
+<!-- ↑↑↑ PARTIALS SLIDER ↑↑↑ -->
+
 {% include 'partials/header.njk' %}
 
+{% if page.fileSlug ==='' %}
+  
+{% include 'partials/slider.njk' %}
+
+{% endif %}
+
+<!-- ↓↓↓ PARTIALS SLIDER ↓↓↓ -->
+
+
+<!-- ↑↑↑ PARTIALS HERO ↑↑↑ -->
+
+{% if page.fileSlug !=='' %}
+
+{% include 'partials/hero.njk' %}
+
+{% endif %}
+
+<!-- ↓↓↓ PARTIALS HERO ↓↓↓ -->
+
 <main class="main">
+
 <!-- ↑↑↑ ŠABLONA ↑↑↑ -->
 
 {{ content | safe }}
@@ -39,6 +61,8 @@ layout: layouts/template.njk
     hoverpause: true
   }).mount()
 </script>
+
+<script src="/js/fslightbox.js"></script>
 
 <script>
   // Get the button:

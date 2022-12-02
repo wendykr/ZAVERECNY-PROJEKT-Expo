@@ -1,0 +1,83 @@
+@use 'breakpoint';
+@use 'font';
+@use 'color';
+
+.slider {
+    padding: 0;
+    display: none;
+
+    @media screen and (min-width: breakpoint.$width-tablet) {
+        display: block;
+    }
+
+    @media screen and (min-width: breakpoint.$width-computer) {
+        margin-top: 160px;
+    }
+}
+
+.glide {
+    
+    &__link {
+        display: grid;
+        align-items: center;
+        text-decoration: none;
+
+        &--right {
+            justify-items: start;
+        }
+
+        &--right {
+            justify-items: end;
+        }
+    }
+
+    &__content {
+        grid-column: 1 / 2;
+        grid-row: 1 / 2;
+        order: 2;
+        line-height: 1.4;
+        font-family: font.$font-glide;
+        font-size: 2.8vw;
+        font-weight: 500;
+
+        &--left {
+            width: 40%;
+            padding-left: 6vw;
+            text-align: left;
+        }
+
+        &--right {
+            width: 50%;
+            padding-right: 6vw;
+            text-align: right;
+        }
+
+        &--light {
+            color: white;  
+        }
+
+        &--dark {
+            color: #211f60;
+        }
+    }
+
+    &__picture {
+        object-fit: fill;
+        width: 100%;
+        height: auto;
+        grid-column: 1 / 2;
+        grid-row: 1 / 2;
+        order: 1;
+    }
+
+    &__arrows {
+
+        @media screen and (min-width: breakpoint.$width-tablet) {
+            display: none;
+        }
+
+        @media screen and (min-width: breakpoint.$width-computer) {
+            display: block;
+        }
+    } 
+}
