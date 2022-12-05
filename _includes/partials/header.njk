@@ -7,13 +7,14 @@
 
         <input type="checkbox" class="header__checkbox" id="header-checkbox">
 
-        <label for="header-checkbox" class="header__toogler">☰ Menu</label>
+        <label for="header-checkbox" class="header__toogler">☰</label>
 
         <ul class="header__list">
             <li class="header__item"><a class="header__link {% if page.url === '/program/' %} active{% endif %}" href="/program/">Program</a></li>
             <li class="header__item"><a class="header__link {% if page.url === '/navstevnik/' %} active{% endif %}" href="/navstevnik/">Pro návštěvníky</a></li>
             <li class="header__item"><a class="header__link {% if page.url === '/vystavovatel/' %} active{% endif %}" href="/vystavovatel/">Pro vystavovatele</a></li>
             <li class="header__item"><a class="header__link {% if page.url === '/vstupenky/' %} active{% endif %}" href="/vstupenky/">Vstupenky</a></li>
+            <li class="header__item"><a class="header__link {% if page.url === '/kontakt/' %} active{% endif %}" href="/kontakt/">Kontakt</a></li>
         </ul>
     </nav>
 </header>

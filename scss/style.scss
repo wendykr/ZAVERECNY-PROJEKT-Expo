@@ -5,6 +5,7 @@
 @use 'footer';
 @use 'hero';
 @use 'slider';
+@use 'form';
 
 /* intuitivnejší box-sizing */
 html { box-sizing: border-box; }
@@ -22,7 +23,7 @@ body {
 
 sup, sub {
     line-height: 0;
-  }
+}
 
 section {
     padding: 0 10px;
@@ -34,7 +35,7 @@ section + section {
 
 .main {
     margin: 0 auto;
-    padding: 0;
+    padding-bottom: 40px;
     max-width: breakpoint.$width-computer;
 
     @media screen and (min-width: breakpoint.$width-tablet) {
@@ -150,7 +151,6 @@ section + section {
         font-family: font.$font-special;
         text-align: center;
     }
-
 }
 
 .transport {
@@ -169,7 +169,6 @@ section + section {
         font-family: font.$font-special;
         text-align: center;
     }
-
 }
 
 .partners {
@@ -232,6 +231,7 @@ section + section {
 
 .maps {
     padding: 0;
+    margin-bottom: -40px;
     
     &__title {
         padding-top: 20px;
@@ -269,6 +269,16 @@ section + section {
         text-align: center;
     }
 
+    &__title--column {
+        padding-top: 20px;
+        font-family: font.$font-special;
+        text-align: center;
+
+        @media screen and (min-width: breakpoint.$width-tablet) {
+            text-align: left;
+        }
+    }
+
     &__subtitle {
         padding-top: 18px;
         font-family: font.$font-special;
@@ -276,6 +286,7 @@ section + section {
     }
 
     &__table {
+
         @media screen and (min-width: breakpoint.$width-tablet) {
             margin: 0 auto;
             width: 600px;
@@ -283,11 +294,24 @@ section + section {
     }
 
     &__row {
-        
+
         @media screen and (min-width: breakpoint.$width-tablet) {
             display: flex;
             align-items: center;
             gap: 30px;
+        }
+    }
+
+    &__flex {
+        text-align: center;
+    }
+
+    @media screen and (min-width: breakpoint.$width-tablet) {
+        &__flex {
+            display: flex;
+            justify-content: space-around;
+            align-items: flex-start;
+            text-align: left;
         }
     }
 
@@ -296,8 +320,7 @@ section + section {
     }
 
     &__time {
-
-        color: #13529e;
+        color: color.$color-blue-dark;
         font-size: 26px;
     }
 }
@@ -316,7 +339,8 @@ section + section {
     &__item {
         margin: 10px;
         padding: 10px;
-        border: 1px solid rgba(#13529e, 0.5);
+        border: 1px solid rgba(color.$color-secondary-bg, 1);
+        background-color: #ffffff;
         text-align: center;
 
         @media screen and (min-width: breakpoint.$width-tablet) {
@@ -339,7 +363,7 @@ section + section {
     &__name {
         margin: 0;
         font-size: 17px;
-        color: #13529e;
+        color: color.$color-blue-dark;
         text-transform: uppercase;
         letter-spacing: 2px;
     }
@@ -396,7 +420,7 @@ section + section {
 
     &__title--popular {
         padding: 10px 0;
-        background-color: #13529e;
+        background-color: color.$color-blue-dark;
         color: color.$color-secondary-text;
     }
 
@@ -404,14 +428,14 @@ section + section {
         padding: 20px 0;
         font-size: 26px;
         font-weight: bold;
-        color: #13529e;
+        color: color.$color-blue-dark;
     }
 
     &__price--popular {
         padding: 20px 0;
         font-size: 26px;
         font-weight: bold;
-        color: #13529e;
+        color: color.$color-blue-dark;
 
         @media screen and (min-width: breakpoint.$width-computer) {
             padding: 30px 0;
@@ -453,8 +477,10 @@ section + section {
 }
 
 .schedule {
+    text-align: center;
 
     @media screen and (min-width: breakpoint.$width-computer) {
+        text-align: left;
         display: flex;
         justify-content: space-between;
         align-items: flex-start;
@@ -463,7 +489,63 @@ section + section {
 
     &__title {
         font-weight: bold;
-        color: #13529e;
+        color: color.$color-blue-dark;
+    }
+}
+
+.hotels {
+
+    @media screen and (min-width: breakpoint.$width-tablet) {
+        display: flex;
+        justify-content: center;
+        flex-wrap: nowrap;
+        gap: 10px;
+    }
+
+    &__item + &__item {
+        margin-top: 10px;
+
+        @media screen and (min-width: breakpoint.$width-tablet) {
+            margin-top: 0;
+        }
+    }
+
+    &__item {
+        flex: 0 0 calc(100% / 3);
+        padding: 20px;
+        border: 1px solid rgba(color.$color-secondary-bg, 1);
+        background-color: #ffffff;
+    }
+
+    &__picture {
+        max-width: 100%;
+    }
+
+    &__title {
+        font-size: 18px;
+        color: color.$color-blue-dark;
+    }
+
+    &__description {
+
+    }
+
+    &__button {
+        margin: 20px 0;
+    }
+
+    &__link {
+        text-decoration: none;
+        padding: 10px;
+        color: color.$color-blue-dark;
+        border: 1px solid color.$color-blue-dark;
+        border-radius: 5px;
+        
+        &:hover {
+            color: color.$color-secondary-text;
+            background-color: color.$color-blue-dark;
+            
+        }
     }
 }
 
@@ -475,14 +557,14 @@ section + section {
     z-index: 99; /* Make sure it does not overlap */
     border: none; /* Remove borders */
     outline: none; /* Remove outline */
-    background-color: #13529e; /* Set a background color */
-    color: white; /* Text color */
+    background-color: color.$color-blue-dark; /* Set a background color */
+    color: color.$color-secondary-text; /* Text color */
     cursor: pointer; /* Add a mouse pointer on hover */
     padding: 15px; /* Some padding */
     border-radius: 10px; /* Rounded corners */
     font-size: 18px; /* Increase font size */
-  }
-  
-  #myBtn:hover {
-    background-color: #555; /* Add a dark-grey background on hover */
-  }
+
+    &:hover {
+        background-color: #555; /* Add a dark-grey background on hover */
+    }
+}

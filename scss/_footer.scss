@@ -8,17 +8,15 @@
     max-width: breakpoint.$width-computer;
     background-color: #050e19;
     color: color.$color-secondary-text;
-    font-size: 18px;
+    font-size: 14px;
     text-align: center;
 
     @media screen and (min-width: breakpoint.$width-tablet) {
         max-width: breakpoint.$width-computer - 1px;
-        font-size: 16px;
     }
 
     @media screen and (min-width: breakpoint.$width-computer) {
         max-width: 100%;
-        font-size: 16px;
     }
 
     &__flex {
@@ -33,8 +31,8 @@
         }
     }
 
-    &__list {
-        padding: 10px;
+    &__list + &__list {
+        padding: 16px;
     }
 
     &__link {
@@ -42,7 +40,7 @@
         text-decoration: none;
 
         &:hover {
-            color: #e6edf7;
+            color: color.$color-secondary-bg;
         }
     }
 

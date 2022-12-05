@@ -60,7 +60,7 @@
         display: block;
         padding: 10px 0;
         padding-right: 20px;
-        font-size: 20px;
+        font-size: 24px;
         text-align: right;
         cursor: pointer;
 
@@ -88,7 +88,6 @@
             position: static;
             max-width: breakpoint.$width-computer - 1px;
             display: flex;
-            justify-content: space-between;
         }
 
         @media screen and (min-width: breakpoint.$width-computer) {
@@ -97,19 +96,17 @@
     }
 
     &__item {
-        font-size: 20px;
+        font-size: 16px;
         text-transform: uppercase;
         border-top: 1px solid rgba(color.$color-primary-text, 0.3);
 
         @media screen  and (min-width: breakpoint.$width-tablet) {
             border-top: 0;
             flex: 1 0 auto;
-            font-size: 17px;
         }
 
         @media screen and (min-width: breakpoint.$width-computer) {
             padding: 0 0;
-            font-size: 16px;
         }
     }
 
