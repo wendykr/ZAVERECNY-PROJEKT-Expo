@@ -404,6 +404,21 @@ sup, sub {
   line-height: 0;
 }
 
+.link {
+  color: #13529e;
+}
+.link:hover {
+  color: #2d1f16;
+}
+
+.link--decoration {
+  color: #13529e;
+  text-decoration: none;
+}
+.link--decoration:hover {
+  color: #2d1f16;
+}
+
 section {
   padding: 0 10px;
 }
@@ -554,7 +569,40 @@ section + section {
   font-family: "PT Sans", sans-serif;
   text-align: center;
 }
-
+@media screen and (min-width: 640px) {
+  .transport__content {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+  }
+}
+@media screen and (min-width: 960px) {
+  .transport__content {
+    flex-wrap: nowrap;
+  }
+}
+.transport__item {
+  margin: 10px 0;
+  padding: 10px;
+  background-color: #ffffff;
+  border: 1px solid #e6edf7;
+  text-align: center;
+}
+@media screen and (min-width: 640px) {
+  .transport__item {
+    margin: 0;
+    flex: 0 0 calc((100% - 10px) / 2);
+  }
+}
+@media screen and (min-width: 960px) {
+  .transport__item {
+    flex: 0 0 100%;
+  }
+}
+.transport__subtitle {
+  color: #13529e;
+  font-weight: bold;
+}
 @media screen and (min-width: 640px) {
   .partners {
     padding: 0 20px;
@@ -701,15 +749,18 @@ section + section {
 }
 @media screen and (min-width: 640px) {
   .person {
-    display: flex;
-    justify-content: center;
-    align-items: center;
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(260px, 1fr));
     gap: 10px;
-    flex-wrap: wrap;
+  }
+}
+@media screen and (min-width: 640px) {
+  .person {
+    grid-template-columns: repeat(auto-fill, minmax(320px, 1fr));
   }
 }
 .person__item {
-  margin: 10px;
+  margin: 10px 0;
   padding: 10px;
   border: 1px solid #e6edf7;
   background-color: #ffffff;
@@ -717,9 +768,10 @@ section + section {
 }
 @media screen and (min-width: 640px) {
   .person__item {
+    margin: 0;
     display: flex;
     align-items: center;
-    gap: 10px;
+    gap: 20px;
   }
 }
 .person__foto {
@@ -745,7 +797,7 @@ section + section {
   margin-top: 20px;
   display: grid;
   grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
-  gap: 20px;
+  gap: 10px;
 }
 .gallery__photo {
   width: 100%;
