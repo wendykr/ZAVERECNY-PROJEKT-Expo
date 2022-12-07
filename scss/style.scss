@@ -11,6 +11,10 @@
 html { box-sizing: border-box; }
 *, ::after, ::before { box-sizing: inherit; }
 
+html {
+    scroll-behavior: smooth;
+}
+
 body {
     margin: 0;
 	padding: 0;
@@ -424,6 +428,10 @@ section + section {
 
     &__data {
         text-align: center;
+
+        @media screen and (min-width: breakpoint.$width-tablet) {
+            text-align: left;
+        }
     }
 
     &__name {
@@ -476,6 +484,8 @@ section + section {
         @media screen and (min-width: breakpoint.$width-computer) {
             margin-top: 0;
             margin-bottom: 0;
+            border-left: 0;
+            border-right: 0;
        }
     }
 
@@ -516,12 +526,12 @@ section + section {
 
     &__item {
         padding: 5px 0;
-        border: 1px solid color.$color-secondary-bg;
+        border-top: 1px solid color.$color-secondary-bg;
     }
 
     &__item--popular {
         padding: 5px 0;
-        border: 1px solid color.$color-secondary-bg;
+        border-top: 1px solid color.$color-secondary-bg;
 
         @media screen and (min-width: breakpoint.$width-computer) {
             border-left: 0;
@@ -629,6 +639,7 @@ section + section {
     padding: 15px; /* Some padding */
     border-radius: 10px; /* Rounded corners */
     font-size: 18px; /* Increase font size */
+    transition: 0.3s ease-in;
 
     &:hover {
         background-color: #555; /* Add a dark-grey background on hover */

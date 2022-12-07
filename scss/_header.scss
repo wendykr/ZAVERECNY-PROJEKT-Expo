@@ -88,6 +88,7 @@
             position: static;
             max-width: breakpoint.$width-computer - 1px;
             display: flex;
+            justify-content: space-around;
         }
 
         @media screen and (min-width: breakpoint.$width-computer) {
@@ -102,7 +103,6 @@
 
         @media screen  and (min-width: breakpoint.$width-tablet) {
             border-top: 0;
-            flex: 1 0 auto;
         }
 
         @media screen and (min-width: breakpoint.$width-computer) {
@@ -118,7 +118,7 @@
         text-decoration: none;
 
         @media screen and (min-width: breakpoint.$width-tablet) {
-            padding: 10px 0;
+            padding: 10px 30px;
             text-align: center;
         }
 
@@ -145,7 +145,7 @@
         color: #13529e;
         background-color: color.$color-secondary-text;
 
-        @media screen and (min-width: breakpoint.$width-computer) {
+        @media screen and (min-width: breakpoint.$width-tablet) {
             &::after {
                 content:"";
                 height: 2px;
