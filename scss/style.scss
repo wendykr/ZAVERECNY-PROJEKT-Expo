@@ -201,6 +201,7 @@ section + section {
         }
 
         @media screen and (min-width: breakpoint.$width-computer) {
+            justify-content: space-around;
             flex-wrap: nowrap;
         }
     }
@@ -211,30 +212,54 @@ section + section {
         background-color: color.$color-white;
         border: 1px solid rgba(color.$color-secondary-bg, 1);
         text-align: center;
+        display: flex;
+        align-items: center;
+        gap: 20px;
 
 
         @media screen and (min-width: breakpoint.$width-tablet) {
+            display: block;
             margin: 0;
             flex: 0 0 calc((100% - 10px) / 2);
         }
 
         @media screen and (min-width: breakpoint.$width-computer) {
-            flex: 0 0 100%;
+            flex: 0 0 calc((100% - 10px) / 4);
+        }
+    }
+
+    &__container--top {
+        margin: 0 auto;
+        display: flex;
+        justify-content: flex-start;
+        align-items: center;
+        width: 120px;
+        height: 120px;
+        flex: 0 0 120px;
+
+        @media screen and (min-width: breakpoint.$width-tablet) {
+            justify-content: center;
+        }
+    }
+
+    &__container--bottom {
+        text-align: left;
+
+        @media screen and (min-width: breakpoint.$width-tablet) {
+            text-align: center;
         }
     }
 
     &__icon {
-
+        width: 75px;
+        display: block;
+        margin: 0 auto;
     }
 
     &__subtitle {
+        margin-top: 20px;
         color: color.$color-blue-dark;
         font-weight: bold;
-  
-    }
-
-    &__description {
-
     }
 }
 
@@ -409,7 +434,7 @@ section + section {
         margin: 10px 0;
         padding: 10px;
         border: 1px solid rgba(color.$color-secondary-bg, 1);
-        background-color: #ffffff;
+        background-color: color.$color-white;
         text-align: center;
 
         @media screen and (min-width: breakpoint.$width-tablet) {
@@ -590,7 +615,7 @@ section + section {
         flex: 0 0 calc(100% / 3);
         padding: 20px;
         border: 1px solid rgba(color.$color-secondary-bg, 1);
-        background-color: #ffffff;
+        background-color: color.$color-white;
     }
 
     &__picture {
@@ -600,10 +625,6 @@ section + section {
     &__title {
         font-size: 18px;
         color: color.$color-blue-dark;
-    }
-
-    &__description {
-
     }
 
     &__button {

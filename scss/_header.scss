@@ -9,7 +9,7 @@
     max-width: breakpoint.$width-computer;
     display: flex;
     justify-content: space-between;
-    background-color: #ffffff;
+    background-color: color.$color-white;
     text-align: center;
     box-shadow: 0px 15px 10px -15px rgba(#000000, 0.15);
     z-index: 9999;
@@ -71,7 +71,7 @@
 
     &__toogler:hover {
         background-color: color.$color-secondary-text;
-        color: #13529e;
+        color: color.$color-blue-dark;
     }
 
     &__list {
@@ -80,7 +80,7 @@
         padding: 0;
         position: absolute;
         right: 0;
-        background-color: #ffffff;
+        background-color: color.$color-white;
         list-style: none;
 
         @media screen and (min-width: breakpoint.$width-tablet) {
@@ -89,6 +89,7 @@
             max-width: breakpoint.$width-computer - 1px;
             display: flex;
             justify-content: space-around;
+            align-items: center;
         }
 
         @media screen and (min-width: breakpoint.$width-computer) {
@@ -118,7 +119,7 @@
         text-decoration: none;
 
         @media screen and (min-width: breakpoint.$width-tablet) {
-            padding: 10px 30px;
+            padding: 10px 2vw;
             text-align: center;
         }
 
@@ -128,21 +129,21 @@
 
         &:hover {
             background-color: color.$color-secondary-text;
-            color: #13529e;
+            color: color.$color-blue-dark;
 
             @media screen and (min-width: breakpoint.$width-computer) {
                 padding: 10px 20px;
             }
 
             & > .active {
-                color: #13529e;
+                color: color.$color-blue-dark;
                 background-color: color.$color-secondary-text;
             }
         }
     }
 
     & .active {
-        color: #13529e;
+        color: color.$color-blue-dark;
         background-color: color.$color-secondary-text;
 
         @media screen and (min-width: breakpoint.$width-tablet) {
@@ -150,7 +151,7 @@
                 content:"";
                 height: 2px;
                 border: 0;
-                background: #13529e;
+                background: color.$color-blue-dark;
                 width: 100%;
                 margin: 1px auto 0px auto;
                 display: block;
