@@ -859,6 +859,7 @@ section + section {
 }
 .package__version {
   border: 1px solid #e6edf7;
+  background-color: #ffffff;
 }
 @media screen and (min-width: 960px) {
   .package__version {

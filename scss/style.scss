@@ -494,6 +494,7 @@ section + section {
 
     &__version {
         border: 1px solid color.$color-secondary-bg;
+        background-color: color.$color-white;
 
         @media screen and (min-width: breakpoint.$width-computer) {
             flex: 0 0 calc(100% / 3);
