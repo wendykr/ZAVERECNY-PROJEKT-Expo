@@ -25,6 +25,12 @@ body {
     font-size: 16px;
 }
 
+.svg-hidden {
+    position: absolute;
+    width: 0;
+    top:0;
+}
+
 sup, sub {
     line-height: 0;
 }
@@ -87,12 +93,18 @@ section + section {
     &__item {
         padding: 10px 10px;
 
+        @media screen and (min-width: breakpoint.$width-tablet) {
+            padding: 20px 10px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            gap: 20px;
+        }
+
         @media screen and (min-width: breakpoint.$width-computer) {
             padding: 40px 10px;
-            display: flex;
             justify-content: space-between;
             align-items: center;
-            gap: 10px;
         }
     }
 
@@ -107,7 +119,8 @@ section + section {
     &__icon {
         display: none;
         width: 50px;
-        height: auto;
+        height: 50px;
+        fill: color.$color-primary-text;
 
         @media screen and (min-width: breakpoint.$width-tablet) {
             display: inline-block;
@@ -156,24 +169,6 @@ section + section {
     }
 }
 
-.about {
-    font-size: 18px;
-
-    @media screen and (min-width: breakpoint.$width-tablet) {
-        padding: 0 20px;
-    }
-
-    @media screen and (min-width: breakpoint.$width-computer) {
-        padding: 0 140px;
-    }
-
-    &__title {
-        padding-top: 20px;
-        font-family: font.$font-special;
-        text-align: center;
-    }
-}
-
 .transport {
     font-size: 18px;
 
@@ -192,7 +187,6 @@ section + section {
     }
 
     &__content {
-
 
         @media screen and (min-width: breakpoint.$width-tablet) {
             display: flex;
@@ -254,6 +248,7 @@ section + section {
         width: 75px;
         display: block;
         margin: 0 auto;
+        fill: color.$color-primary-text;
     }
 
     &__subtitle {
@@ -352,7 +347,7 @@ section + section {
     }
 
     @media screen and (min-width: breakpoint.$width-computer) {
-        padding: 0 140px;
+        padding: 0 100px;
     }
 
     &__title {
@@ -667,3 +662,4 @@ section + section {
         background-color: #555; /* Add a dark-grey background on hover */
     }
 }
+

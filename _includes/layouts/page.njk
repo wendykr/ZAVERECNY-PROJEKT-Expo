@@ -2,9 +2,19 @@
 layout: layouts/template.njk
 ---
 
-<!-- ↑↑↑ PARTIALS SLIDER ↑↑↑ -->
+<!-- ↑↑↑ PARTIALS SVG ICON ↑↑↑ -->
+  
+{% include 'partials/svg.njk' %}
+
+<!-- ↓↓↓ PARTIALS SVG ICON ↓↓↓ -->
+
+<!-- ↑↑↑ PARTIALS HEADER ↑↑↑ -->
 
 {% include 'partials/header.njk' %}
+
+<!-- ↓↓↓ PARTIALS HEADER ↓↓↓ -->
+
+<!-- ↑↑↑ PARTIALS SLIDER ↑↑↑ -->
 
 {% if page.fileSlug ==='' %}
   
@@ -13,7 +23,6 @@ layout: layouts/template.njk
 {% endif %}
 
 <!-- ↓↓↓ PARTIALS SLIDER ↓↓↓ -->
-
 
 <!-- ↑↑↑ PARTIALS HERO ↑↑↑ -->
 
@@ -43,7 +52,7 @@ layout: layouts/template.njk
 
   function growShrinkLogo() {
     let Logo = document.getElementById("header-logo")
-    let mql = window.matchMedia('(min-width: 960px)');
+    let mql = window.matchMedia('(min-width: 980px)');
     if (mql.matches && (document.body.scrollTop > 5 || document.documentElement.scrollTop > 5)) {
       Logo.style.width = '50px';
     } else {

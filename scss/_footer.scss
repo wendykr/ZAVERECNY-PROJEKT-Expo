@@ -26,13 +26,12 @@
             display: flex;
             justify-content: space-between;
             max-width: 100%;
-            font-size: 14px;
             border-bottom: 1px solid rgba(color.$color-secondary-text, 0.3);
         }
     }
 
     &__list + &__list {
-        padding: 16px;
+        padding: 14px;
     }
 
     &__link {
@@ -46,6 +45,8 @@
 
     &__logo {
         width: 68px;
+        height: 18px;
+        fill: color.$color-white;
     }
 
     &__menu {

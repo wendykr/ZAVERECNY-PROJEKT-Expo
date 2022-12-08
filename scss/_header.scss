@@ -89,7 +89,6 @@
             max-width: breakpoint.$width-computer - 1px;
             display: flex;
             justify-content: space-around;
-            align-items: center;
         }
 
         @media screen and (min-width: breakpoint.$width-computer) {
@@ -119,7 +118,7 @@
         text-decoration: none;
 
         @media screen and (min-width: breakpoint.$width-tablet) {
-            padding: 10px 2vw;
+            padding: 10px 20px;
             text-align: center;
         }
 
