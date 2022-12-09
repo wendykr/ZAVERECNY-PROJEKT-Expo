@@ -176,7 +176,7 @@
 @media screen and (min-width: 980px) {
   .footer__flex {
     padding: 10px 0;
-    margin: 0 140px;
+    margin: 0 100px;
     display: flex;
     justify-content: space-between;
     max-width: 100%;
@@ -191,12 +191,15 @@
   text-decoration: none;
 }
 .footer__link:hover {
-  color: #e6edf7;
+  color: #13529e;
 }
 .footer__logo {
   width: 68px;
   height: 18px;
   fill: #ffffff;
+}
+.footer__logo:hover {
+  fill: #13529e;
 }
 .footer__menu {
   margin: 0;
@@ -377,6 +380,7 @@
   background-color: #13529e;
   color: #ffffff;
   font-size: 16px;
+  transition: 0.3s ease-in;
 }
 .form__button:hover {
   background-color: #555;
@@ -561,7 +565,7 @@ section + section {
 }
 @media screen and (min-width: 980px) {
   .transport {
-    padding: 0 140px;
+    padding: 0 100px;
   }
 }
 .transport__title {
@@ -611,7 +615,7 @@ section + section {
   align-items: center;
   width: 120px;
   height: 120px;
-  flex: 0 0 120px;
+  flex: 0 0 20%;
 }
 @media screen and (min-width: 780px) {
   .transport__container--top {
@@ -620,6 +624,7 @@ section + section {
 }
 .transport__container--bottom {
   text-align: left;
+  flex: 0 0 80%;
 }
 @media screen and (min-width: 780px) {
   .transport__container--bottom {
@@ -628,6 +633,7 @@ section + section {
 }
 .transport__icon {
   width: 75px;
+  height: 75px;
   display: block;
   margin: 0 auto;
   fill: #2d1f16;
@@ -668,9 +674,10 @@ section + section {
 .partners__link {
   margin: 10px auto;
   padding: 20px;
-  background-color: #e6edf7;
+  background-color: #ffffff;
+  border: 1px solid #e6edf7;
   width: 250px;
-  height: 250px;
+  height: 125px;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -690,7 +697,7 @@ section + section {
 }
 .partners__logo {
   max-width: 100%;
-  height: auto;
+  max-height: 100px;
 }
 
 .maps {
@@ -846,7 +853,7 @@ section + section {
 .package {
   text-align: center;
 }
-@media screen and (min-width: 980px) {
+@media screen and (min-width: 780px) {
   .package {
     display: flex;
     justify-content: center;
@@ -857,7 +864,7 @@ section + section {
   border: 1px solid #e6edf7;
   background-color: #ffffff;
 }
-@media screen and (min-width: 980px) {
+@media screen and (min-width: 780px) {
   .package__version {
     flex: 0 0 33.3333333333%;
     margin-top: 20px;
@@ -868,7 +875,7 @@ section + section {
   margin-top: 20px;
   margin-bottom: 20px;
 }
-@media screen and (min-width: 980px) {
+@media screen and (min-width: 780px) {
   .package--popular {
     margin-top: 0;
     margin-bottom: 0;
@@ -935,7 +942,7 @@ section + section {
 .schedule {
   text-align: center;
 }
-@media screen and (min-width: 980px) {
+@media screen and (min-width: 780px) {
   .schedule {
     text-align: left;
     display: flex;

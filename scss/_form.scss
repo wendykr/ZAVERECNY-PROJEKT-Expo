@@ -46,6 +46,7 @@
         background-color: color.$color-blue-dark;
         color: color.$color-secondary-text;
         font-size: 16px;
+        transition: 0.3s ease-in;
     
         &:hover {
             background-color: #555;

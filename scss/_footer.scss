@@ -22,7 +22,7 @@
     &__flex {
         @media screen and (min-width: breakpoint.$width-computer) {
             padding: 10px 0;
-            margin: 0 140px;
+            margin: 0 100px;
             display: flex;
             justify-content: space-between;
             max-width: 100%;
@@ -39,7 +39,7 @@
         text-decoration: none;
 
         &:hover {
-            color: color.$color-secondary-bg;
+            color: color.$color-blue-dark;
         }
     }
 
@@ -47,6 +47,10 @@
         width: 68px;
         height: 18px;
         fill: color.$color-white;
+
+        &:hover {
+            fill: color.$color-blue-dark;
+        }
     }
 
     &__menu {
