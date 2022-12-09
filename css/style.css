@@ -243,6 +243,10 @@
   text-align: center;
   text-transform: uppercase;
   position: relative;
+  -webkit-animation-name: fadeIn;
+          animation-name: fadeIn;
+  -webkit-animation-duration: 2s;
+          animation-duration: 2s;
 }
 @media screen and (min-width: 980px) {
   .hero__title {
@@ -269,6 +273,23 @@
   left: 0;
 }
 
+@-webkit-keyframes fadeIn {
+  0% {
+    transform: translateY(200px);
+  }
+  100% {
+    transform: translateY(0);
+  }
+}
+
+@keyframes fadeIn {
+  0% {
+    transform: translateY(200px);
+  }
+  100% {
+    transform: translateY(0);
+  }
+}
 .slider {
   padding: 0;
   display: none;
@@ -674,6 +695,7 @@ section + section {
 .partners__link {
   margin: 10px auto;
   padding: 20px;
+  overflow: hidden;
   background-color: #ffffff;
   border: 1px solid #e6edf7;
   width: 250px;
@@ -681,6 +703,12 @@ section + section {
   display: flex;
   justify-content: center;
   align-items: center;
+}
+.partners__link:hover {
+  border: 1px solid rgba(19, 82, 158, 0.3);
+}
+.partners__link:hover .partners__item {
+  transform: scale(1.1);
 }
 @media screen and (min-width: 780px) {
   .partners__link {
@@ -694,10 +722,15 @@ section + section {
   align-items: center;
   width: 100%;
   height: auto;
+  transition: transform 0.5s;
 }
 .partners__logo {
   max-width: 100%;
   max-height: 100px;
+  filter: grayscale(100%);
+}
+.partners__logo:hover {
+  filter: grayscale(0%);
 }
 
 .maps {

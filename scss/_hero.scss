@@ -26,6 +26,10 @@
         text-align: center;
         text-transform: uppercase;
         position: relative;
+        // animation: pohyb 3s;
+        animation-name: fadeIn;
+        animation-duration: 2s;
+
 
         @media screen and (min-width: breakpoint.$width-computer) {
             padding: 0 140px;
@@ -51,4 +55,9 @@
         bottom: 0;
         left: 0;
     }
+}
+
+@keyframes fadeIn {
+    0%   { transform: translateY(200px); }
+    100% { transform: translateY(0); }
 }
