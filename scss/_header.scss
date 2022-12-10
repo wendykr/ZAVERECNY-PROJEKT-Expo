@@ -25,6 +25,25 @@
         left: 0;
         right: 0;
     }
+    
+    &__container {
+        margin: 0 auto;
+        max-width: breakpoint.$width-computer;
+        display: flex;
+        justify-content: space-between;
+    
+        @media screen and (min-width: breakpoint.$width-tablet) {
+            max-width: breakpoint.$width-computer - 1px;
+            display: block;
+        }
+    
+        @media screen and (min-width: breakpoint.$width-computer) {
+            max-width: 1400px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+    }
 
     &__logo {
         width: 125px;
