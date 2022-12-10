@@ -25,6 +25,38 @@ body {
     font-size: 16px;
 }
 
+.container {
+    margin: 0 auto;
+    max-width: breakpoint.$width-computer;
+
+    @media screen and (min-width: breakpoint.$width-tablet) {
+        max-width: breakpoint.$width-computer - 1px;
+    }
+
+    @media screen and (min-width: breakpoint.$width-computer) {
+        max-width: 1400px;
+    }
+}
+
+.container--grid {
+    margin: 0 auto;
+    max-width: breakpoint.$width-computer;
+    display: flex;
+    justify-content: space-between;
+
+    @media screen and (min-width: breakpoint.$width-tablet) {
+        max-width: breakpoint.$width-computer - 1px;
+        display: block;
+    }
+
+    @media screen and (min-width: breakpoint.$width-computer) {
+        max-width: 1400px;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+    }
+}
+
 .svg-hidden {
     position: absolute;
     width: 0;
@@ -54,6 +86,19 @@ sup, sub {
 
 section {
     padding: 0 10px;
+}
+
+section:not(.information):not(.maps):not(.slider):not(.hero) {
+    margin: 0 auto;
+    max-width: breakpoint.$width-computer;
+
+    @media screen and (min-width: breakpoint.$width-tablet) {
+        max-width: breakpoint.$width-computer - 1px;
+    }
+
+    @media screen and (min-width: breakpoint.$width-computer) {
+        max-width: 1400px;
+    }
 }
 
 .main {
