@@ -56,13 +56,9 @@ section {
     padding: 0 10px;
 }
 
-section + section {
-    margin-top: 20px;
-}
-
 .main {
     margin: 0 auto;
-    padding-bottom: 40px;
+    padding: 20px 0 40px 0;
     max-width: breakpoint.$width-computer;
 
     @media screen and (min-width: breakpoint.$width-tablet) {
@@ -75,11 +71,11 @@ section + section {
 }
 
 .information {
+    margin-top: -20px;
     padding: 10px;
     background-color: color.$color-secondary-bg;
     font-size: 18px;
     text-align: center;
-    margin-top: -10px;
 
     @media screen and (min-width: breakpoint.$width-computer) {
         padding: 10px 100px;

@@ -459,13 +459,9 @@ section {
   padding: 0 10px;
 }
 
-section + section {
-  margin-top: 20px;
-}
-
 .main {
   margin: 0 auto;
-  padding-bottom: 40px;
+  padding: 20px 0 40px 0;
   max-width: 980px;
 }
 @media screen and (min-width: 780px) {
@@ -480,11 +476,11 @@ section + section {
 }
 
 .information {
+  margin-top: -20px;
   padding: 10px;
   background-color: #e6edf7;
   font-size: 18px;
   text-align: center;
-  margin-top: -10px;
 }
 @media screen and (min-width: 980px) {
   .information {
