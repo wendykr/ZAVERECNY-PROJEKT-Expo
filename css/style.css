@@ -891,12 +891,34 @@ section + section {
     align-items: stretch;
   }
 }
+.package__version:first-child {
+  border-left: 1px solid #e6edf7;
+  background-color: #ffffff;
+}
+@media screen and (min-width: 780px) {
+  .package__version:first-child {
+    flex: 0 0 33.3333333333%;
+    margin-top: 20px;
+    margin-bottom: 20px;
+  }
+}
 .package__version {
   border: 1px solid #e6edf7;
   background-color: #ffffff;
 }
 @media screen and (min-width: 780px) {
   .package__version {
+    flex: 0 0 33.3333333333%;
+    margin-top: 20px;
+    margin-bottom: 20px;
+  }
+}
+.package__version:last-child {
+  border-right: 1px solid #e6edf7;
+  background-color: #ffffff;
+}
+@media screen and (min-width: 780px) {
+  .package__version:last-child {
     flex: 0 0 33.3333333333%;
     margin-top: 20px;
     margin-bottom: 20px;

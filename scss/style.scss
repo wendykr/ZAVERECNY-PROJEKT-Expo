@@ -502,8 +502,30 @@ section + section {
         align-items: stretch;
    }
 
+    &__version:first-child {
+        border-left: 1px solid color.$color-secondary-bg;
+        background-color: color.$color-white;
+
+        @media screen and (min-width: breakpoint.$width-tablet) {
+            flex: 0 0 calc(100% / 3);
+            margin-top: 20px;
+            margin-bottom: 20px;
+       }
+    }
+
     &__version {
         border: 1px solid color.$color-secondary-bg;
+        background-color: color.$color-white;
+
+        @media screen and (min-width: breakpoint.$width-tablet) {
+            flex: 0 0 calc(100% / 3);
+            margin-top: 20px;
+            margin-bottom: 20px;
+       }
+    }
+
+    &__version:last-child {
+        border-right: 1px solid color.$color-secondary-bg;
         background-color: color.$color-white;
 
         @media screen and (min-width: breakpoint.$width-tablet) {
