@@ -12,8 +12,14 @@
     <meta name="msapplication-TileColor" content="#2b5797">
     <meta name="theme-color" content="#ffffff">
     <meta name="robots" content="noindex, nofollow" />
-    <title>Expo</title>
-    <!-- <title>{{ title }} BURZA EXPO PARDUBICE</title> -->
+    <title>
+        {% if page.url === '/' %} BURZA EXPO PARDUBICE{% endif %}
+        {% if page.url === '/program/' %} {{ title }} | BURZA EXPO PARDUBICE{% endif %}
+        {% if page.url === '/navstevnik/' %} {{ title }} | BURZA EXPO PARDUBICE{% endif %}
+        {% if page.url === '/vystavovatel/' %} {{ title }} | BURZA EXPO PARDUBICE{% endif %}
+        {% if page.url === '/vstupenky/' %} {{ title }} | BURZA EXPO PARDUBICE{% endif %}
+        {% if page.url === '/kontakt' %} {{ title }} | BURZA EXPO PARDUBICE{% endif %}
+    </title>
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Josefin+Sans:wght@400;500&display=swap" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css2?family=PT+Sans:ital,wght@0,400;0,700;1,400&display=swap" rel="stylesheet">

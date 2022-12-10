@@ -26,10 +26,10 @@
         text-align: center;
         text-transform: uppercase;
         position: relative;
-        // animation: pohyb 3s;
         animation-name: fadeIn;
-        animation-duration: 2s;
-
+        animation-duration:1.75s;
+        animation-timing-function: ease;
+        //animation-iteration-count: infinite;
 
         @media screen and (min-width: breakpoint.$width-computer) {
             padding: 0 140px;
@@ -58,6 +58,6 @@
 }
 
 @keyframes fadeIn {
-    0%   { transform: translateY(190px); }
-    100% { transform: translateY(0); }
+    0%   { transform: translateY(150px); opacity: 0;  }
+    100% { transform: none; opacity: 1; }
 }

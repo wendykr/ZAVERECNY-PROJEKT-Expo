@@ -259,8 +259,10 @@
   position: relative;
   -webkit-animation-name: fadeIn;
           animation-name: fadeIn;
-  -webkit-animation-duration: 2s;
-          animation-duration: 2s;
+  -webkit-animation-duration: 1.75s;
+          animation-duration: 1.75s;
+  -webkit-animation-timing-function: ease;
+          animation-timing-function: ease;
 }
 @media screen and (min-width: 980px) {
   .hero__title {
@@ -289,19 +291,23 @@
 
 @-webkit-keyframes fadeIn {
   0% {
-    transform: translateY(190px);
+    transform: translateY(150px);
+    opacity: 0;
   }
   100% {
-    transform: translateY(0);
+    transform: none;
+    opacity: 1;
   }
 }
 
 @keyframes fadeIn {
   0% {
-    transform: translateY(190px);
+    transform: translateY(150px);
+    opacity: 0;
   }
   100% {
-    transform: translateY(0);
+    transform: none;
+    opacity: 1;
   }
 }
 .slider {
