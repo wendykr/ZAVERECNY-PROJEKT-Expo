@@ -4,11 +4,7 @@
 
 .slider {
     padding: 0;
-    display: none;
-
-    @media screen and (min-width: breakpoint.$width-tablet) {
-        display: block;
-    }
+    display: block;
 
     @media screen and (min-width: breakpoint.$width-computer) {
         margin-top: 162px;
@@ -71,13 +67,14 @@
     }
 
     &__arrows {
+        opacity: 1;
 
         @media screen and (min-width: breakpoint.$width-tablet) {
-            display: none;
+            opacity: 0;
         }
+    }
 
-        @media screen and (min-width: breakpoint.$width-computer) {
-            display: block;
-        }
-    } 
+    &:hover &__arrows {
+        opacity: 1;
+    }
 }
