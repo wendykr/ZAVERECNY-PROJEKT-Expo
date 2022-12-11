@@ -5,15 +5,15 @@
 .form {
     margin: 0 auto;
     width: 100%;
-    max-width: 500px;
+    max-width: 31.25rem;
     font-family: font.$font-default;
 
     @media screen and (min-width: breakpoint.$width-tablet) {
-        max-width: 800px;
+        max-width: 50rem;
     }
 
     &__field {
-        margin-top: 10px;
+        margin-top: 0.625rem;
         width: 100%;
         display: block;
 
@@ -21,15 +21,15 @@
 
     &__label {
         display: block;
-        font-size: 16px;
+        font-size: 1rem;
         color: gray;
     }
 
     &__input {
-        padding: 10px;
+        padding: 0.625rem;
         width: 100%;
         border: 1px solid gray;
-        font-size: 16px;
+        font-size: 1rem;
         font-family: font.$font-default;
 
         &:focus {
@@ -41,8 +41,8 @@
     &__button {
         border: 0;
         border-radius: 5px;
-        margin-top: 14px;
-        padding: 10px 20px;
+        margin-top: 0.875rem;
+        padding: 0.625rem 1.25rem;
         background-color: color.$color-blue-dark;
         color: color.$color-secondary-text;
         font-size: 16px;
