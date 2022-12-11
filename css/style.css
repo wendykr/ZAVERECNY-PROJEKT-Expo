@@ -89,6 +89,7 @@
   padding: 0;
   position: absolute;
   right: 0;
+  z-index: 3;
   background-color: #ffffff;
   list-style: none;
 }
@@ -873,13 +874,13 @@ section:not(.information):not(.maps):not(.slider):not(.hero) {
 @media screen and (min-width: 640px) {
   .person {
     display: grid;
-    grid-template-columns: repeat(auto-fill, minmax(260px, 1fr));
+    grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
     gap: 10px;
   }
 }
-@media screen and (min-width: 640px) {
+@media screen and (min-width: 980px) {
   .person {
-    grid-template-columns: repeat(auto-fill, minmax(320px, 1fr));
+    grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
   }
 }
 .person__item {
@@ -888,6 +889,7 @@ section:not(.information):not(.maps):not(.slider):not(.hero) {
   border: 1px solid #e6edf7;
   background-color: #ffffff;
   text-align: center;
+  min-width: 320px;
 }
 @media screen and (min-width: 640px) {
   .person__item {
@@ -1106,8 +1108,8 @@ section:not(.information):not(.maps):not(.slider):not(.hero) {
 #myBtn {
   display: none; /* Hidden by default */
   position: fixed; /* Fixed/sticky position */
-  bottom: 20px; /* Place the button at the bottom of the page */
-  right: 30px; /* Place the button 30px from the right */
+  bottom: 0; /* Place the button at the bottom of the page */
+  right: 16px; /* Place the button 30px from the right */
   z-index: 99; /* Make sure it does not overlap */
   border: none; /* Remove borders */
   outline: none; /* Remove outline */
@@ -1115,10 +1117,15 @@ section:not(.information):not(.maps):not(.slider):not(.hero) {
   color: #ffffff; /* Text color */
   cursor: pointer; /* Add a mouse pointer on hover */
   padding: 15px; /* Some padding */
-  border-radius: 10px; /* Rounded corners */
   font-size: 18px; /* Increase font size */
   transition: 0.3s ease-in;
 }
 #myBtn:hover {
   background-color: #555; /* Add a dark-grey background on hover */
+}
+
+.icon-arrow-top {
+  fill: #ffffff;
+  width: 20px;
+  height: 20px;
 }/*# sourceMappingURL=style.css.map */

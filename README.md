@@ -1,2 +1,2 @@
 # ZAVERECNY-PROJEKT-Expo
-Závěrečný projekt pro kurz Staň se kóderkou od Czechitas.
+Závěrečný projekt kurzu Staň se kóderkou od Czechitas.

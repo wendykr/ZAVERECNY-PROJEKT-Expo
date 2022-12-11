@@ -42,7 +42,11 @@ layout: layouts/template.njk
 <!-- ↓↓↓ ŠABLONA ↓↓↓ -->
 </main>
 
-<button onclick="topFunction()" id="myBtn" title="Go to top">Top</button>
+<button onclick="topFunction()" id="myBtn" title="Go to top">
+  <svg class="icon-arrow-top">
+    <use xlink:href="#icon-arrow-top"></use>
+  </svg>
+</button>
 
 {% include 'partials/footer.njk' %}
 

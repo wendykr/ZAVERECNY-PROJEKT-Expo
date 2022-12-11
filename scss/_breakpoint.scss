@@ -1,10 +1,12 @@
 // Breakpointy
-// Mobil   0 - 539px
-// Tablet  640px - 979px
-// Tablet Header  640px - 979px
-// PC      980px a víc
+// Mobil            0 - 539px
+// Tablet           640px - 979px
+// Tablet Header    640px - 979px
+// PC               980px a víc
+// PC Max           1400px
 
 $width-mobile: 539px;
 $width-tablet: 640px;
 $width-tablet-header: 780px;
 $width-computer: 980px;
+$width-computer-max: 1400px;
