@@ -723,6 +723,7 @@ section:not(.information):not(.maps):not(.slider):not(.hero) {
   padding: 0.625rem;
   background-color: #ffffff;
   border: 1px solid #e6edf7;
+  box-shadow: 2px 2px 7px #e6edf7;
   text-align: center;
   display: flex;
   align-items: center;
@@ -809,6 +810,7 @@ section:not(.information):not(.maps):not(.slider):not(.hero) {
   overflow: hidden;
   background-color: #ffffff;
   border: 1px solid #e6edf7;
+  box-shadow: 2px 2px 7px #e6edf7;
   width: 15.625rem;
   height: 7.8125rem;
   display: flex;
@@ -876,6 +878,7 @@ section:not(.information):not(.maps):not(.slider):not(.hero) {
   margin: 0.625rem auto;
   padding: 0.625rem;
   border: 1px solid #e6edf7;
+  box-shadow: 2px 2px 7px #e6edf7;
   background-color: #ffffff;
   width: 21.875rem;
   text-align: center;
@@ -1071,6 +1074,7 @@ section:not(.information):not(.maps):not(.slider):not(.hero) {
   flex: 0 0 calc((100% - 1.25rem) / 3);
   padding: 1.25rem;
   border: 1px solid #e6edf7;
+  box-shadow: 2px 2px 7px #e6edf7;
   background-color: #ffffff;
 }
 .hotels__picture {

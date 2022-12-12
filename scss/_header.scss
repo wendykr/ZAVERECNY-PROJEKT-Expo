@@ -31,12 +31,12 @@
         max-width: breakpoint.$width-computer;
         display: flex;
         justify-content: space-between;
-    
+
         @media screen and (min-width: breakpoint.$width-tablet-header) {
             max-width: breakpoint.$width-computer - 1px;
             display: block;
         }
-    
+
         @media screen and (min-width: breakpoint.$width-computer) {
             max-width: breakpoint.$width-computer-max;
             display: flex;

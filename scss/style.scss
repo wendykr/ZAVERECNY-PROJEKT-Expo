@@ -17,7 +17,7 @@ html {
 
 body {
     margin: 0;
-	padding: 0;
+    padding: 0;
     background-color: color.$color-primary-bg;
     line-height: 1.6;
     font-family: font.$font-default;
@@ -308,11 +308,11 @@ section:not(.information):not(.maps):not(.slider):not(.hero) {
         padding: 0.625rem;
         background-color: color.$color-white;
         border: 1px solid rgba(color.$color-secondary-bg, 1);
+        box-shadow: 2px 2px 7px rgba(color.$color-secondary-bg, 1);
         text-align: center;
         display: flex;
         align-items: center;
         gap: 1.25rem;
-
 
         @media screen and (min-width: breakpoint.$width-tablet) {
             display: block;
@@ -397,6 +397,7 @@ section:not(.information):not(.maps):not(.slider):not(.hero) {
         overflow: hidden;
         background-color: color.$color-white;
         border: 1px solid color.$color-secondary-bg;
+        box-shadow: 2px 2px 7px rgba(color.$color-secondary-bg, 1);
         width: 15.625rem;
         height: 7.8125rem;
         display: flex;
@@ -412,7 +413,7 @@ section:not(.information):not(.maps):not(.slider):not(.hero) {
         &:hover .partners__item {
             transform: scale(1.1);
         }
-    
+
         @media screen and (min-width: breakpoint.$width-tablet) {
             margin: 0;
             flex: 0 0 15.625rem;
@@ -437,7 +438,7 @@ section:not(.information):not(.maps):not(.slider):not(.hero) {
 .maps {
     padding: 0;
     margin-bottom: -2.5rem;
-    
+
     &__title {
         padding-top: 1.25rem;
         font-family: font.$font-special;
@@ -453,7 +454,6 @@ section:not(.information):not(.maps):not(.slider):not(.hero) {
         @media screen and (min-width: breakpoint.$width-computer) {
             height: 31.25rem;
         }
-
     }
 }
 
@@ -471,6 +471,7 @@ section:not(.information):not(.maps):not(.slider):not(.hero) {
         margin: 0.625rem auto;
         padding: 0.625rem;
         border: 1px solid rgba(color.$color-secondary-bg, 1);
+        box-shadow: 2px 2px 7px rgba(color.$color-secondary-bg, 1);
         background-color: color.$color-white;
         width: 21.875rem;
         text-align: center;
@@ -513,9 +514,9 @@ section:not(.information):not(.maps):not(.slider):not(.hero) {
 
 .gallery {
     margin-top: 1.25rem;
-	display: grid;
-	grid-template-columns: repeat(auto-fill, minmax(15.625rem, 1fr));
-	gap: 0.625rem;
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(15.625rem, 1fr));
+    gap: 0.625rem;
 
     &__photo {
         width: 100%;
@@ -677,6 +678,7 @@ section:not(.information):not(.maps):not(.slider):not(.hero) {
         flex: 0 0 calc((100% - 1.25rem) / 3);
         padding: 1.25rem;
         border: 1px solid rgba(color.$color-secondary-bg, 1);
+        box-shadow: 2px 2px 7px rgba(color.$color-secondary-bg, 1);
         background-color: color.$color-white;
     }
 
@@ -703,7 +705,6 @@ section:not(.information):not(.maps):not(.slider):not(.hero) {
         &:hover {
             color: color.$color-secondary-text;
             background-color: color.$color-blue-dark;
-            
         }
     }
 }
