@@ -503,6 +503,71 @@ section:not(.information):not(.maps):not(.slider):not(.hero) {
   }
 }
 
+.section {
+  font-size: 1.125rem;
+}
+@media screen and (min-width: 640px) {
+  .section {
+    padding: 0 1.25rem;
+  }
+}
+@media screen and (min-width: 980px) {
+  .section {
+    padding: 0 6.25rem;
+  }
+}
+.section__title {
+  padding-top: 1.25rem;
+  font-family: "PT Sans", sans-serif;
+  text-align: center;
+}
+.section__title--column {
+  padding-top: 1.25rem;
+  font-family: "PT Sans", sans-serif;
+  text-align: center;
+}
+@media screen and (min-width: 640px) {
+  .section__title--column {
+    text-align: left;
+  }
+}
+.section__subtitle {
+  padding-top: 1.125rem;
+  font-family: "PT Sans", sans-serif;
+  text-align: center;
+}
+@media screen and (min-width: 640px) {
+  .section__table {
+    margin: 0 auto;
+    width: 37.5rem;
+  }
+}
+@media screen and (min-width: 640px) {
+  .section__row {
+    display: flex;
+    align-items: center;
+    gap: 1.875rem;
+  }
+}
+.section__flex {
+  text-align: center;
+}
+@media screen and (min-width: 640px) {
+  .section__flex {
+    display: flex;
+    justify-content: space-around;
+    align-items: flex-start;
+    text-align: left;
+  }
+}
+.section__row + .section__row {
+  border-top: 1px solid rgba(45, 31, 22, 0.3);
+}
+.section__time {
+  color: #13529e;
+  font-size: 1.625rem;
+}
+
 .main {
   margin: 0 auto;
   padding: 1.25rem 0 2.5rem 0;
@@ -672,7 +737,7 @@ section:not(.information):not(.maps):not(.slider):not(.hero) {
 }
 @media screen and (min-width: 980px) {
   .transport__item {
-    flex: 0 0 calc((100% - 0.625rem) / 4);
+    flex: 0 0 calc((100% - 2.5rem) / 4);
   }
 }
 .transport__container--top {
@@ -691,7 +756,7 @@ section:not(.information):not(.maps):not(.slider):not(.hero) {
 }
 .transport__container--bottom {
   text-align: left;
-  flex: 0 0 80%;
+  flex: 0 1 80%;
 }
 @media screen and (min-width: 640px) {
   .transport__container--bottom {
@@ -718,7 +783,7 @@ section:not(.information):not(.maps):not(.slider):not(.hero) {
 }
 @media screen and (min-width: 980px) {
   .partners {
-    padding: 0 8.75rem;
+    padding: 0 6.25rem;
   }
 }
 .partners__title {
@@ -798,95 +863,26 @@ section:not(.information):not(.maps):not(.slider):not(.hero) {
   }
 }
 
-.section {
-  font-size: 1.125rem;
-}
-@media screen and (min-width: 640px) {
-  .section {
-    padding: 0 1.25rem;
-  }
-}
-@media screen and (min-width: 980px) {
-  .section {
-    padding: 0 6.25rem;
-  }
-}
-.section__title {
-  padding-top: 1.25rem;
-  font-family: "PT Sans", sans-serif;
-  text-align: center;
-}
-.section__title--column {
-  padding-top: 1.25rem;
-  font-family: "PT Sans", sans-serif;
-  text-align: center;
-}
-@media screen and (min-width: 640px) {
-  .section__title--column {
-    text-align: left;
-  }
-}
-.section__subtitle {
-  padding-top: 1.125rem;
-  font-family: "PT Sans", sans-serif;
-  text-align: center;
-}
-@media screen and (min-width: 640px) {
-  .section__table {
-    margin: 0 auto;
-    width: 37.5rem;
-  }
-}
-@media screen and (min-width: 640px) {
-  .section__row {
-    display: flex;
-    align-items: center;
-    gap: 1.875rem;
-  }
-}
-.section__flex {
-  text-align: center;
-}
-@media screen and (min-width: 640px) {
-  .section__flex {
-    display: flex;
-    justify-content: space-around;
-    align-items: flex-start;
-    text-align: left;
-  }
-}
-.section__row + .section__row {
-  border-top: 1px solid rgba(45, 31, 22, 0.3);
-}
-.section__time {
-  color: #13529e;
-  font-size: 1.625rem;
-}
-
-.person {
-  display: block;
-}
 @media screen and (min-width: 640px) {
   .person {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(20rem, 1fr));
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
     gap: 0.625rem;
   }
 }
-@media screen and (min-width: 980px) {
-  .person {
-    grid-template-columns: repeat(auto-fit, minmax(21.875rem, 1fr));
-  }
-}
 .person__item {
-  margin: 0.625rem 0;
+  margin: 0.625rem auto;
   padding: 0.625rem;
   border: 1px solid #e6edf7;
   background-color: #ffffff;
+  width: 21.875rem;
   text-align: center;
 }
 @media screen and (min-width: 640px) {
   .person__item {
+    flex: 0 0 21.875rem;
     margin: 0;
     display: flex;
     align-items: center;
@@ -911,7 +907,7 @@ section:not(.information):not(.maps):not(.slider):not(.hero) {
   font-size: 1.0625rem;
   color: #13529e;
   text-transform: uppercase;
-  letter-spacing: 0.125rem;
+  letter-spacing: 0.125em;
 }
 .person__position {
   margin: 0;
@@ -1072,7 +1068,7 @@ section:not(.information):not(.maps):not(.slider):not(.hero) {
   }
 }
 .hotels__item {
-  flex: 0 0 33.3333333333%;
+  flex: 0 0 calc((100% - 1.25rem) / 3);
   padding: 1.25rem;
   border: 1px solid #e6edf7;
   background-color: #ffffff;

@@ -82,6 +82,79 @@ section:not(.information):not(.maps):not(.slider):not(.hero) {
     }
 }
 
+.section {
+    font-size: 1.125rem;
+
+    @media screen and (min-width: breakpoint.$width-tablet) {
+        padding: 0 1.25rem;
+    }
+
+    @media screen and (min-width: breakpoint.$width-computer) {
+        padding: 0 6.25rem;
+    }
+
+    &__title {
+        padding-top: 1.25rem;
+        font-family: font.$font-special;
+        text-align: center;
+    }
+
+    &__title--column {
+        padding-top: 1.25rem;
+        font-family: font.$font-special;
+        text-align: center;
+
+        @media screen and (min-width: breakpoint.$width-tablet) {
+            text-align: left;
+        }
+    }
+
+    &__subtitle {
+        padding-top: 1.125rem;
+        font-family: font.$font-special;
+        text-align: center;
+    }
+
+    &__table {
+
+        @media screen and (min-width: breakpoint.$width-tablet) {
+            margin: 0 auto;
+            width: 37.5rem;
+        }
+    }
+
+    &__row {
+
+        @media screen and (min-width: breakpoint.$width-tablet) {
+            display: flex;
+            align-items: center;
+            gap: 1.875rem;
+        }
+    }
+
+    &__flex {
+        text-align: center;
+    }
+
+    @media screen and (min-width: breakpoint.$width-tablet) {
+        &__flex {
+            display: flex;
+            justify-content: space-around;
+            align-items: flex-start;
+            text-align: left;
+        }
+    }
+
+    &__row + &__row {
+        border-top: 1px solid rgba(color.$color-primary-text, 0.3);
+    }
+
+    &__time {
+        color: color.$color-blue-dark;
+        font-size: 1.625rem;
+    }
+}
+
 .main {
     margin: 0 auto;
     padding: 1.25rem 0 2.5rem 0;
@@ -248,7 +321,7 @@ section:not(.information):not(.maps):not(.slider):not(.hero) {
         }
 
         @media screen and (min-width: breakpoint.$width-computer) {
-            flex: 0 0 calc((100% - 0.625rem) / 4);
+            flex: 0 0 calc((100% - 2.5rem) / 4);
         }
     }
 
@@ -268,7 +341,7 @@ section:not(.information):not(.maps):not(.slider):not(.hero) {
 
     &__container--bottom {
         text-align: left;
-        flex: 0 0 80%;
+        flex: 0 1 80%;
 
         @media screen and (min-width: breakpoint.$width-tablet) {
             text-align: center;
@@ -297,7 +370,7 @@ section:not(.information):not(.maps):not(.slider):not(.hero) {
     }
 
     @media screen and (min-width: breakpoint.$width-computer) {
-        padding: 0 8.75rem;
+        padding: 0 6.25rem;
     }
 
     &__title {
@@ -384,100 +457,26 @@ section:not(.information):not(.maps):not(.slider):not(.hero) {
     }
 }
 
-.section {
-    font-size: 1.125rem;
-
-    @media screen and (min-width: breakpoint.$width-tablet) {
-        padding: 0 1.25rem;
-    }
-
-    @media screen and (min-width: breakpoint.$width-computer) {
-        padding: 0 6.25rem;
-    }
-
-    &__title {
-        padding-top: 1.25rem;
-        font-family: font.$font-special;
-        text-align: center;
-    }
-
-    &__title--column {
-        padding-top: 1.25rem;
-        font-family: font.$font-special;
-        text-align: center;
-
-        @media screen and (min-width: breakpoint.$width-tablet) {
-            text-align: left;
-        }
-    }
-
-    &__subtitle {
-        padding-top: 1.125rem;
-        font-family: font.$font-special;
-        text-align: center;
-    }
-
-    &__table {
-
-        @media screen and (min-width: breakpoint.$width-tablet) {
-            margin: 0 auto;
-            width: 37.5rem;
-        }
-    }
-
-    &__row {
-
-        @media screen and (min-width: breakpoint.$width-tablet) {
-            display: flex;
-            align-items: center;
-            gap: 1.875rem;
-        }
-    }
-
-    &__flex {
-        text-align: center;
-    }
-
-    @media screen and (min-width: breakpoint.$width-tablet) {
-        &__flex {
-            display: flex;
-            justify-content: space-around;
-            align-items: flex-start;
-            text-align: left;
-        }
-    }
-
-    &__row + &__row {
-        border-top: 1px solid rgba(color.$color-primary-text, 0.3);
-    }
-
-    &__time {
-        color: color.$color-blue-dark;
-        font-size: 1.625rem;
-    }
-}
-
 .person {
-    display: block;
 
-        @media screen and (min-width: breakpoint.$width-tablet) {
-             display: grid;
-             grid-template-columns: repeat(auto-fit, minmax(20rem, 1fr));
-             gap: 0.625rem;
-        }
-
-        @media screen and (min-width: breakpoint.$width-computer) {
-            grid-template-columns: repeat(auto-fit, minmax(21.875rem, 1fr));
-       }
+    @media screen and (min-width: breakpoint.$width-tablet) {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-wrap: wrap;
+        gap: 0.625rem;
+    }
 
     &__item {
-        margin: 0.625rem 0;
+        margin: 0.625rem auto;
         padding: 0.625rem;
         border: 1px solid rgba(color.$color-secondary-bg, 1);
         background-color: color.$color-white;
+        width: 21.875rem;
         text-align: center;
 
         @media screen and (min-width: breakpoint.$width-tablet) {
+            flex: 0 0 21.875rem;
             margin: 0;
             display: flex;
             align-items: center;
@@ -504,7 +503,7 @@ section:not(.information):not(.maps):not(.slider):not(.hero) {
         font-size: 1.0625rem;
         color: color.$color-blue-dark;
         text-transform: uppercase;
-        letter-spacing: 0.125rem;
+        letter-spacing: 0.125em;
     }
 
     &__position {
@@ -675,7 +674,7 @@ section:not(.information):not(.maps):not(.slider):not(.hero) {
     }
 
     &__item {
-        flex: 0 0 calc(100% / 3);
+        flex: 0 0 calc((100% - 1.25rem) / 3);
         padding: 1.25rem;
         border: 1px solid rgba(color.$color-secondary-bg, 1);
         background-color: color.$color-white;
