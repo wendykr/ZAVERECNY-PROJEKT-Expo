@@ -719,7 +719,7 @@ section:not(.information):not(.maps):not(.slider):not(.hero) {
   }
 }
 .transport__item {
-  margin: 0.625rem 0;
+  margin: 1.25rem 0;
   padding: 0.625rem;
   background-color: #ffffff;
   border: 1px solid #e6edf7;
@@ -805,7 +805,7 @@ section:not(.information):not(.maps):not(.slider):not(.hero) {
   }
 }
 .partners__link {
-  margin: 0.625rem auto;
+  margin: 1.25rem auto;
   padding: 1.25rem;
   overflow: hidden;
   background-color: #ffffff;
@@ -875,16 +875,17 @@ section:not(.information):not(.maps):not(.slider):not(.hero) {
   }
 }
 .person__item {
-  margin: 0.625rem auto;
+  margin: 1.25rem auto;
   padding: 0.625rem;
   border: 1px solid #e6edf7;
   box-shadow: 2px 2px 7px #e6edf7;
   background-color: #ffffff;
-  width: 21.875rem;
+  max-width: 21.875rem;
   text-align: center;
 }
 @media screen and (min-width: 640px) {
   .person__item {
+    width: 21.875rem;
     flex: 0 0 21.875rem;
     margin: 0;
     display: flex;
@@ -1063,7 +1064,7 @@ section:not(.information):not(.maps):not(.slider):not(.hero) {
   }
 }
 .hotels__item + .hotels__item {
-  margin-top: 0.625rem;
+  margin-top: 1.25rem;
 }
 @media screen and (min-width: 640px) {
   .hotels__item + .hotels__item {
@@ -1071,11 +1072,16 @@ section:not(.information):not(.maps):not(.slider):not(.hero) {
   }
 }
 .hotels__item {
-  flex: 0 0 calc((100% - 1.25rem) / 3);
+  display: block;
   padding: 1.25rem;
   border: 1px solid #e6edf7;
   box-shadow: 2px 2px 7px #e6edf7;
   background-color: #ffffff;
+}
+@media screen and (min-width: 640px) {
+  .hotels__item {
+    flex: 0 0 calc((100% - 1.25rem) / 3);
+  }
 }
 .hotels__picture {
   max-width: 100%;
@@ -1084,19 +1090,28 @@ section:not(.information):not(.maps):not(.slider):not(.hero) {
   font-size: 1.125rem;
   color: #13529e;
 }
+.hotels__description {
+  color: #2d1f16;
+}
 .hotels__button {
   margin: 1.25rem 0;
-}
-.hotels__link {
+  display: inline-block;
   text-decoration: none;
+  line-height: 1.4;
   padding: 0.625rem;
   color: #13529e;
   border: 1px solid #13529e;
   border-radius: 5px;
 }
-.hotels__link:hover {
+.hotels__button:hover {
   color: #ffffff;
   background-color: #13529e;
+}
+.hotels__link {
+  text-decoration: none;
+}
+.hotels__link:hover {
+  transform: scale(1.02);
 }
 
 #myBtn {
