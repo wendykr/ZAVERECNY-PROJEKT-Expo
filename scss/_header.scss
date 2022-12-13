@@ -4,8 +4,7 @@
 
 .header {
     margin: 0 auto;
-    padding: 0.625rem 0;
-    padding-left: 0.625rem;
+    padding: 1.25rem;
     max-width: breakpoint.$width-computer;
     background-color: color.$color-white;
     text-align: center;
@@ -13,7 +12,6 @@
     z-index: 9999;
 
     @media screen and (min-width: breakpoint.$width-tablet-header) {
-        padding-left: 0;
         max-width: breakpoint.$width-computer - 1px;
     }
 
@@ -72,7 +70,6 @@
     &__toogler {
         display: block;
         padding: 0.625rem 0;
-        padding-right: 1.25rem;
         font-size: 1.5rem;
         text-align: right;
         cursor: pointer;
