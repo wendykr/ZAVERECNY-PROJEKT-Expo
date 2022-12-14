@@ -66,7 +66,7 @@
 }
 .header__toogler {
   display: block;
-  padding: 0.625rem 0;
+  padding: 0 0 0.625rem 1.25rem;
   font-size: 1.5rem;
   text-align: right;
   cursor: pointer;
@@ -97,13 +97,11 @@
     max-width: 979px;
     display: flex;
     justify-content: space-around;
-    align-items: center;
   }
 }
 @media screen and (min-width: 980px) {
   .header__list {
     margin-top: 0;
-    align-items: flex-start;
   }
 }
 .header__item {
@@ -193,7 +191,7 @@
   }
 }
 .footer__list + .footer__list {
-  padding: 0.875rem;
+  padding: 0.875rem 0;
 }
 .footer__link {
   color: #ffffff;
@@ -214,6 +212,11 @@
   margin: 0;
   padding: 0;
   list-style: none;
+}
+@media screen and (min-width: 980px) {
+  .footer__menu {
+    text-align: right;
+  }
 }
 .footer__item {
   border-bottom: 1px solid rgba(255, 255, 255, 0.3);
@@ -376,7 +379,7 @@
   margin: 0 auto;
   width: 100%;
   max-width: 31.25rem;
-  font-family: "Josefin Sans", sans-serif;
+  font-family: "Exo 2", sans-serif;
 }
 @media screen and (min-width: 640px) {
   .form {
@@ -398,7 +401,7 @@
   width: 100%;
   border: 1px solid gray;
   font-size: 1rem;
-  font-family: "Josefin Sans", sans-serif;
+  font-family: "Exo 2", sans-serif;
 }
 .form__input:focus {
   outline: 0;
@@ -436,7 +439,7 @@ body {
   padding: 0;
   background-color: #f8f9fa;
   line-height: 1.6;
-  font-family: "Josefin Sans", sans-serif;
+  font-family: "Exo 2", sans-serif;
   color: #2d1f16;
   font-size: 1rem;
 }
@@ -913,6 +916,10 @@ section:not(.information):not(.maps):not(.slider):not(.hero) {
   margin: 0;
 }
 
+.rules__list {
+  padding: 0 40px;
+}
+
 .gallery {
   margin-top: 1.25rem;
   display: grid;
@@ -979,29 +986,29 @@ section:not(.information):not(.maps):not(.slider):not(.hero) {
   }
 }
 .package__title {
-  padding: 0.625rem 0;
+  padding: 0.625rem 0.625rem;
   background-color: #e6edf7;
 }
 .package__title--popular {
-  padding: 0.625rem 0;
+  padding: 0.625rem 0.625rem;
   background-color: #13529e;
   color: #ffffff;
 }
 .package__price {
-  padding: 1.25rem 0;
+  padding: 1.25rem 0.625rem;
   font-size: 1.625rem;
   font-weight: bold;
   color: #13529e;
 }
 .package__price--popular {
-  padding: 1.25rem 0;
+  padding: 1.25rem 0.625rem;
   font-size: 1.625rem;
   font-weight: bold;
   color: #13529e;
 }
 @media screen and (min-width: 980px) {
   .package__price--popular {
-    padding: 1.875rem 0;
+    padding: 1.875rem 0.625rem;
   }
 }
 .package__description {
@@ -1010,11 +1017,11 @@ section:not(.information):not(.maps):not(.slider):not(.hero) {
   list-style-type: none;
 }
 .package__item {
-  padding: 0.3125rem 0;
+  padding: 0.3125rem 0.625rem;
   border-top: 1px solid #e6edf7;
 }
 .package__item--popular {
-  padding: 0.3125rem 0;
+  padding: 0.3125rem 0.625rem;
   border-top: 1px solid #e6edf7;
 }
 @media screen and (min-width: 980px) {
@@ -1093,7 +1100,7 @@ section:not(.information):not(.maps):not(.slider):not(.hero) {
   margin: 1.25rem 0;
   display: inline-block;
   text-decoration: none;
-  line-height: 1.5rem;
+  line-height: 1.2rem;
   padding: 0.625rem;
   color: #13529e;
   border: 1px solid #13529e;

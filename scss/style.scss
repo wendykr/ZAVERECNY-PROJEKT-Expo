@@ -512,6 +512,10 @@ section:not(.information):not(.maps):not(.slider):not(.hero) {
     }
 }
 
+.rules__list {
+    padding: 0 40px;
+}
+
 .gallery {
     margin-top: 1.25rem;
     display: grid;
@@ -578,31 +582,31 @@ section:not(.information):not(.maps):not(.slider):not(.hero) {
     }
 
     &__title {
-        padding: 0.625rem 0;
+        padding: 0.625rem 0.625rem;
         background-color: color.$color-secondary-bg;
     }
 
     &__title--popular {
-        padding: 0.625rem 0;
+        padding: 0.625rem 0.625rem;
         background-color: color.$color-blue-dark;
         color: color.$color-secondary-text;
     }
 
     &__price {
-        padding: 1.25rem 0;
+        padding: 1.25rem 0.625rem;
         font-size: 1.625rem;
         font-weight: bold;
         color: color.$color-blue-dark;
     }
 
     &__price--popular {
-        padding: 1.25rem 0;
+        padding: 1.25rem 0.625rem;
         font-size: 1.625rem;
         font-weight: bold;
         color: color.$color-blue-dark;
 
         @media screen and (min-width: breakpoint.$width-computer) {
-            padding: 1.875rem 0;
+            padding: 1.875rem 0.625rem;
        }
     }
 
@@ -613,12 +617,12 @@ section:not(.information):not(.maps):not(.slider):not(.hero) {
     }
 
     &__item {
-        padding: 0.3125rem 0;
+        padding: 0.3125rem 0.625rem;
         border-top: 1px solid color.$color-secondary-bg;
     }
 
     &__item--popular {
-        padding: 0.3125rem 0;
+        padding: 0.3125rem 0.625rem;
         border-top: 1px solid color.$color-secondary-bg;
 
         @media screen and (min-width: breakpoint.$width-computer) {
@@ -703,7 +707,7 @@ section:not(.information):not(.maps):not(.slider):not(.hero) {
         margin: 1.25rem 0;
         display: inline-block;
         text-decoration: none;
-        line-height: 1.5rem;
+        line-height: 1.2rem;
         padding: 0.625rem;
         color: color.$color-blue-dark;
         border: 1px solid color.$color-blue-dark;

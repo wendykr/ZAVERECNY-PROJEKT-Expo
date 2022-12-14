@@ -69,7 +69,7 @@
 
     &__toogler {
         display: block;
-        padding: 0.625rem 0;
+        padding: 0 0 0.625rem 1.25rem;
         font-size: 1.5rem;
         text-align: right;
         cursor: pointer;
@@ -100,12 +100,10 @@
             max-width: breakpoint.$width-computer - 1px;
             display: flex;
             justify-content: space-around;
-            align-items: center;
         }
 
         @media screen and (min-width: breakpoint.$width-computer) {
             margin-top: 0;
-            align-items: flex-start;
         }
     }
 
