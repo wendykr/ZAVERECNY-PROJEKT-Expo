@@ -3,8 +3,8 @@
 Závěrečný projekt semestrálního kurzu [Staň se kodérkou PODZIM 2022](https://www.czechitas.cz/kurzy/stan-se-koderkou)
 
 - [Minimální požadavky](#Minimální-požadavky)
-- [Zadání a rozsah](#Abstrakt)
-- [Realizace](#Rozsah-a-realizace)
+- [Abstrakt](#Abstrakt)
+- [Rozsah a realizace](#Rozsah-a-realizace)
 
 ## Minimální požadavky
 
