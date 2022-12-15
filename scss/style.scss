@@ -48,6 +48,33 @@ sup, sub {
     line-height: 0;
 }
 
+ul {
+    padding: 0 2.5rem;
+}
+
+.line::before, .line::after {
+    content: "";
+    vertical-align: middle;
+    display: none;
+    width: 9.375rem;
+    height: 0.063rem;
+
+    @media screen and (min-width: breakpoint.$width-tablet) {
+        display: inline-block;
+    }
+}
+
+
+.line::before {
+    background: linear-gradient(45deg, color.$color-primary-bg, color.$color-blue-dark);
+    margin-right: 1.563rem;
+}
+
+.line::after {
+    background: linear-gradient(45deg, color.$color-blue-dark, color.$color-primary-bg);
+    margin-left: 1.563rem;
+}
+
 .link {
     color: color.$color-blue-dark;
 
