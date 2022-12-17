@@ -314,7 +314,7 @@
 }
 @media screen and (min-width: 980px) {
   .slider {
-    margin-top: 10.125rem;
+    margin-top: 10rem;
   }
 }
 
@@ -354,14 +354,16 @@
 .glide__content--dark {
   color: #211f60;
 }
+.glide__fallback {
+  grid-column: 1/2;
+  grid-row: 1/2;
+  order: 1;
+}
 .glide__picture {
   -o-object-fit: fill;
      object-fit: fill;
   width: 100%;
   height: auto;
-  grid-column: 1/2;
-  grid-row: 1/2;
-  order: 1;
 }
 .glide__arrows {
   opacity: 1;
@@ -612,7 +614,7 @@ section:not(.information):not(.maps):not(.slider):not(.hero) {
 }
 
 .information {
-  margin-top: -1.25rem;
+  margin-top: -1.6875rem;
   padding: 0.625rem 1.25rem;
   background-color: #e6edf7;
   font-size: 1.125rem;

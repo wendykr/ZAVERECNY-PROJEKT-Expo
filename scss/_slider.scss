@@ -7,7 +7,7 @@
     display: block;
 
     @media screen and (min-width: breakpoint.$width-computer) {
-        margin-top: 10.125rem;
+        margin-top: 10rem;
     }
 }
 
@@ -57,13 +57,16 @@
         }
     }
 
+   &__fallback {
+        grid-column: 1 / 2;
+        grid-row: 1 / 2;
+        order: 1;
+    }
+
     &__picture {
         object-fit: fill;
         width: 100%;
         height: auto;
-        grid-column: 1 / 2;
-        grid-row: 1 / 2;
-        order: 1;
     }
 
     &__arrows {
