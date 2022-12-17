@@ -376,6 +376,9 @@
 .glide:hover .glide__arrows {
   opacity: 1;
 }
+.glide__arrow {
+  padding: 16px 19px !important;
+}
 
 .form {
   margin: 0 auto;
