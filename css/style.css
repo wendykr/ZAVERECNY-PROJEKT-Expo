@@ -120,6 +120,7 @@
   }
 }
 .header__link {
+  position: relative;
   display: block;
   padding: 0.625rem 1.25rem;
   color: #2d1f16;
@@ -128,7 +129,6 @@
 }
 @media screen and (min-width: 780px) {
   .header__link {
-    padding: 0.625rem 1.25rem;
     text-align: center;
   }
 }
@@ -145,6 +145,25 @@
   color: #13529e;
   background-color: #ffffff;
 }
+@media screen and (min-width: 780px) {
+  .header__link:hover:not(.active)::after {
+    content: "";
+    height: 0.125rem;
+    background-color: #13529e;
+    width: calc(100% - 2.5rem);
+    margin: 0.0625rem auto 0 auto;
+    display: block;
+    -webkit-animation-name: underlineLink;
+            animation-name: underlineLink;
+    -webkit-animation-duration: 0.3s;
+            animation-duration: 0.3s;
+    -webkit-animation-timing-function: ease;
+            animation-timing-function: ease;
+    position: absolute;
+    left: 0;
+    right: 0;
+  }
+}
 .header .active {
   color: #13529e;
   background-color: #ffffff;
@@ -153,14 +172,30 @@
   .header .active::after {
     content: "";
     height: 0.125rem;
-    border: 0;
-    background: #13529e;
+    background-color: #13529e;
     width: 100%;
     margin: 0.0625rem auto 0 auto;
     display: block;
   }
 }
 
+@-webkit-keyframes underlineLink {
+  0% {
+    width: 0;
+  }
+  100% {
+    width: calc(100% - 40px);
+  }
+}
+
+@keyframes underlineLink {
+  0% {
+    width: 0;
+  }
+  100% {
+    width: calc(100% - 40px);
+  }
+}
 .footer {
   margin: 0 auto;
   padding: 0.625rem 1.25rem;

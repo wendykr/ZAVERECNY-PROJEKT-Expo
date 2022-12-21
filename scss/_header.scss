@@ -122,6 +122,7 @@
     }
 
     &__link {
+        position: relative;
         display: block;
         padding: 0.625rem 1.25rem;
         color: color.$color-primary-text;
@@ -129,7 +130,6 @@
         text-decoration: none;
 
         @media screen and (min-width: breakpoint.$width-tablet-header) {
-            padding: 0.625rem 1.25rem;
             text-align: center;
         }
 
@@ -145,6 +145,23 @@
                 color: color.$color-blue-dark;
                 background-color: color.$color-secondary-text;
             }
+
+            @media screen and (min-width: breakpoint.$width-tablet-header) {
+                &:not(.active)::after {
+                    content: "";
+                    height: 0.125rem;
+                    background-color: color.$color-blue-dark;
+                    width: calc(100% - (1.25rem * 2));
+                    margin: 0.0625rem auto 0 auto;
+                    display: block;
+                    animation-name: underlineLink;
+                    animation-duration: .3s;
+                    animation-timing-function: ease;
+                    position: absolute;
+                    left: 0;
+                    right: 0;
+                }
+            }
         }
     }
 
@@ -154,14 +171,18 @@
 
         @media screen and (min-width: breakpoint.$width-tablet-header) {
             &::after {
-                content:"";
+                content: "";
                 height: 0.125rem;
-                border: 0;
-                background: color.$color-blue-dark;
+                background-color: color.$color-blue-dark;
                 width: 100%;
                 margin: 0.0625rem auto 0 auto;
                 display: block;
             }
         }
     }
+}
+
+@keyframes underlineLink {
+    0%   { width: 0; }
+    100% { width: calc(100% - 40px); }
 }
