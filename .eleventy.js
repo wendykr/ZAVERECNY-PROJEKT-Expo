@@ -11,6 +11,9 @@ module.exports = function(eleventyConfig) {
 	// Zkopírovat css/ to _site/js/
 	eleventyConfig.addPassthroughCopy("js");
 
+  // Úplná URL adresa
+  eleventyConfig.addGlobalData("rootURL", "https://expo-pce.netlify.app");
+
   return {
     // možné formáty šablon
     templateFormats: ["njk", "html", "md", "liquid"],

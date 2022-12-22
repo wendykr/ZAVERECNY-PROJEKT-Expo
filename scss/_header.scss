@@ -13,6 +13,7 @@
 
     @media screen and (min-width: breakpoint.$width-tablet-header) {
         max-width: breakpoint.$width-computer - 1px;
+        padding-bottom: 0;
     }
 
     @media screen and (min-width: breakpoint.$width-computer) {
@@ -124,34 +125,46 @@
     &__link {
         position: relative;
         display: block;
-        padding: 0.625rem 1.25rem;
+        padding: 1.25rem 1.25rem 1.25rem 2.5rem;
         color: color.$color-primary-text;
         text-align: right;
         text-decoration: none;
 
         @media screen and (min-width: breakpoint.$width-tablet-header) {
+            padding-left: 1.25rem;
             text-align: center;
         }
 
         &:hover {
-            background-color: color.$color-secondary-text;
-            color: color.$color-blue-dark;
+            background-color: color.$color-blue-dark;
+            color: color.$color-white;
 
-            @media screen and (min-width: breakpoint.$width-computer) {
-                padding: 0.625rem 1.25rem;
+            @media screen and (min-width: breakpoint.$width-tablet-header) {
+                background-color: color.$color-secondary-text;
+                color: color.$color-blue-dark;
+            }
+
+            @media screen and (min-width: breakpoint.$width-tablet-header) {
+                padding: 1.25rem;
             }
 
             & > .active {
-                color: color.$color-blue-dark;
-                background-color: color.$color-secondary-text;
+                background-color: color.$color-blue-dark;
+                color: color.$color-white;
+
+                @media screen and (min-width: breakpoint.$width-tablet-header) {
+                    background-color: color.$color-secondary-text;
+                    color: color.$color-blue-dark;
+
+                }
             }
 
             @media screen and (min-width: breakpoint.$width-tablet-header) {
                 &:not(.active)::after {
                     content: "";
                     height: 0.125rem;
-                    background-color: color.$color-blue-dark;
                     width: calc(100% - (1.25rem * 2));
+                    background-color: color.$color-blue-dark;
                     margin: 0.0625rem auto 0 auto;
                     display: block;
                     animation-name: underlineLink;
@@ -166,15 +179,18 @@
     }
 
     & .active {
-        color: color.$color-blue-dark;
-        background-color: color.$color-secondary-text;
+        background-color: color.$color-blue-dark;
+        color: color.$color-white;
 
         @media screen and (min-width: breakpoint.$width-tablet-header) {
+            background-color: color.$color-secondary-text;
+            color: color.$color-blue-dark;
+
             &::after {
                 content: "";
                 height: 0.125rem;
-                background-color: color.$color-blue-dark;
                 width: 100%;
+                background-color: color.$color-blue-dark;
                 margin: 0.0625rem auto 0 auto;
                 display: block;
             }

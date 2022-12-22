@@ -11,6 +11,7 @@
 @media screen and (min-width: 780px) {
   .header {
     max-width: 979px;
+    padding-bottom: 0;
   }
 }
 @media screen and (min-width: 980px) {
@@ -122,35 +123,48 @@
 .header__link {
   position: relative;
   display: block;
-  padding: 0.625rem 1.25rem;
+  padding: 1.25rem 1.25rem 1.25rem 2.5rem;
   color: #2d1f16;
   text-align: right;
   text-decoration: none;
 }
 @media screen and (min-width: 780px) {
   .header__link {
+    padding-left: 1.25rem;
     text-align: center;
   }
 }
 .header__link:hover {
-  background-color: #ffffff;
-  color: #13529e;
+  background-color: #13529e;
+  color: #ffffff;
 }
-@media screen and (min-width: 980px) {
+@media screen and (min-width: 780px) {
   .header__link:hover {
-    padding: 0.625rem 1.25rem;
+    background-color: #ffffff;
+    color: #13529e;
+  }
+}
+@media screen and (min-width: 780px) {
+  .header__link:hover {
+    padding: 1.25rem;
   }
 }
 .header__link:hover > .active {
-  color: #13529e;
-  background-color: #ffffff;
+  background-color: #13529e;
+  color: #ffffff;
+}
+@media screen and (min-width: 780px) {
+  .header__link:hover > .active {
+    background-color: #ffffff;
+    color: #13529e;
+  }
 }
 @media screen and (min-width: 780px) {
   .header__link:hover:not(.active)::after {
     content: "";
     height: 0.125rem;
-    background-color: #13529e;
     width: calc(100% - 2.5rem);
+    background-color: #13529e;
     margin: 0.0625rem auto 0 auto;
     display: block;
     -webkit-animation-name: underlineLink;
@@ -165,15 +179,19 @@
   }
 }
 .header .active {
-  color: #13529e;
-  background-color: #ffffff;
+  background-color: #13529e;
+  color: #ffffff;
 }
 @media screen and (min-width: 780px) {
+  .header .active {
+    background-color: #ffffff;
+    color: #13529e;
+  }
   .header .active::after {
     content: "";
     height: 0.125rem;
-    background-color: #13529e;
     width: 100%;
+    background-color: #13529e;
     margin: 0.0625rem auto 0 auto;
     display: block;
   }
