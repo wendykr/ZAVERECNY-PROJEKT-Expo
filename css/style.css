@@ -321,15 +321,17 @@
     padding: 0 8.75rem;
   }
 }
+.hero__position {
+  grid-column: 1/2;
+  grid-row: 1/2;
+  order: 1;
+}
 .hero__picture {
   -o-object-fit: cover;
      object-fit: cover;
   width: 100%;
   min-height: 15.625rem;
   max-height: 18.75rem;
-  grid-column: 1/2;
-  grid-row: 1/2;
-  order: 1;
 }
 .hero::before {
   content: "";

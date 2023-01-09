@@ -1,4 +1,7 @@
 <section class="hero">
     <h1 class="hero__title">{{ title }}</h1>
-    <img class="hero__picture" src="/images/hero-background.jpg" alt="Obrázek hero pozadí">
+    <picture class="hero__position">
+        <source class="hero__picture" srcset="/images/hero-background.webp" width="1225" height="816" type="image/webp">
+        <img class="hero__picture" src="/images/hero-background.jpg" width="1225" height="816" alt="Obrázek hero pozadí">
+    </picture>
 </section>
