@@ -719,6 +719,7 @@ section:not(.information):not(.maps):not(.slider):not(.hero) {
 
     &__picture {
         max-width: 100%;
+        height: auto;
     }
 
     &__title {

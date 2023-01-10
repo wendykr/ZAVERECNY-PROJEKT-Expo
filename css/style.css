@@ -1176,6 +1176,7 @@ section:not(.information):not(.maps):not(.slider):not(.hero) {
 }
 .hotels__picture {
   max-width: 100%;
+  height: auto;
 }
 .hotels__title {
   font-size: 1.125rem;
