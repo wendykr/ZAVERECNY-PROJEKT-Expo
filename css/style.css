@@ -142,10 +142,6 @@
   .header__link:hover {
     background-color: #ffffff;
     color: #13529e;
-  }
-}
-@media screen and (min-width: 780px) {
-  .header__link:hover {
     padding: 1.25rem;
   }
 }
